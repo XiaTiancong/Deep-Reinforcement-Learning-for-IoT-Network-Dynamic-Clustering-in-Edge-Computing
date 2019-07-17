@@ -362,13 +362,10 @@ class Cluster(object, ):
             self.df_sampled = self.agv.identical_sample_rate(self.df, sample_period)
             self.grided_pos = self.agv.trace_grided(self.df_sampled, grid_size)
             self.trace_grided = self.agv.delete_staying_pos(self.grided_pos)
-
             self.trace_input, self.trace_output = self.agv.get_inputs_and_outputs(self.trace_grided, time_steps)
             self.trace_dir_output = self.agv.get_dir(self.trace_input, self.trace_output)
-
             self.trace_input *= grid_size
             self.trace_output *= grid_size
-
             self.act_move_events
 
         else:

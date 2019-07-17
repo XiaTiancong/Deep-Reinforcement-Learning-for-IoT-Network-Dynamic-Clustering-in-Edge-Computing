@@ -36,10 +36,6 @@ train_output *= grid_size
 test_input *= grid_size
 test_output *= grid_size
 
-print(train_input[55])
-print(train_dir_output[55])
-print('Finish importing all the data :)')
-
 # build your neural net
 if categorial == True:
     model = Sequential([
@@ -60,7 +56,6 @@ if categorial == True:
                   loss='categorical_crossentropy',
                   metrics=['accuracy'])
 
-
     print('Training ------------')
     # Another way to train the model
     model.fit(train_input, train_dir_output, epochs=10, batch_size=50)
@@ -71,16 +66,16 @@ if categorial == True:
 
     print('test loss: ', loss)
     print('test accuracy: ', accuracy)
-    '''
+
     # serialize model to JSON
     model_json = model.to_json()
-    with open("model_position_prediction_with_more_time_steps.json", "w") as json_file:
+    with open("LSTM models/LSTM_full_data.json", "w") as json_file:
         json_file.write(model_json)
     # serialize weights to HDF5
-    model.save_weights("model_position_prediction_with_more_time_steps.h5")
+    model.save_weights("LSTM models/LSTM_full_data.h5")
     print("Saved model to disk")
     print(test_dir_output[5])
-    '''
+
     print(model.predict(np.reshape(test_input[5], (-1, time_steps, 2))[:,:-6,:], batch_size=1))
 
 
