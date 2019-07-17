@@ -19,7 +19,7 @@ class AGV:
         self.record_orientation = False
         self.data_proportion = data_proportion
         if mode == 'training':
-            for i in range(2,8):
+            for i in range(1,7):
                 self.f = open("agv_data/agv1_pose" + str(i) + ".log", "r")
                 for line in self.f:
                     if "seq:" in line:
@@ -62,7 +62,7 @@ class AGV:
                             self.nsecs.append(int(nsecs_val[0]))
                 self.f.close()
         if mode == 'training_with_insufficient_data':
-            for i in range(1,2):
+            for i in range(2,4):
                 self.f = open("agv_data/agv1_pose" + str(i) + ".log", "r")
                 for line in self.f:
                     if "seq:" in line:

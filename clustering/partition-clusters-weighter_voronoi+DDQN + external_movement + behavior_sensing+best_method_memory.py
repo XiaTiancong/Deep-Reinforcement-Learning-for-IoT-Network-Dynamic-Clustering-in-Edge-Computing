@@ -18,7 +18,6 @@ from keras.optimizers import sgd
 from keras.models import model_from_json
 from keras.optimizers import Adam
 from read_AGV_data import AGV
-import re
 
 class Cluster(object,):
     def __init__(self):
@@ -334,7 +333,7 @@ class Cluster(object,):
 	# Init the event. Theoretically, the event could be init at any places. In the experiment, to make sure that the clusters are somehow balanced, we select a place that is in the middle position of all clusters. 
     def set_events(self):
         if read_AGV:
-            self.agv = AGV('testing')
+            self.agv = AGV('training_with_insufficient_data')
             self.df = self.agv.get_df()
             self.df = self.agv.fit_to_canvas(self.df, deploy_range)
             self.df_sampled = self.agv.identical_sample_rate(self.df, sample_period)
@@ -458,39 +457,39 @@ class ExperienceReplay(object):
             self.epsilon = self.epsilon * epsilon_decay
 
 if __name__ == "__main__":
-    flag_benchmark_topology = 0		# 0: use coordinates of on the saved files; 1: make new coordinates.
-    flag_benchmark_action = 0		# 0: DQN solution; 1: action is always 0. 
-    flag_gameover_mode = 0			# 0: the game last for a specific time length; 1: the game ends once the cluster is unbalanced over a threshold. 
+    flag_benchmark_topology = 0  # 0: use coordinates of on the saved files; 1: make new coordinates.
+    flag_benchmark_action = 0  # 0: DQN solution; 1: action is always 0.
+    flag_gameover_mode = 0  # 0: the game last for a specific time length; 1: the game ends once the cluster is unbalanced over a threshold.
     Dueling = True
     read_AGV = True
     transfer_learning = False
-    threshold = 0.3                 # speed threshold for targets
-    sample_period = 0.5             # target movement sample rate
+    threshold = 0.3  # speed threshold for targets
+    sample_period = 0.5  # target movement sample rate
     total_tick = 0
     time_steps = 60
 
-    #The setup of IoT network.
+    # The setup of IoT network.
     total_node_number = 80
     server_number = 4
-    node_number = total_node_number-server_number
+    node_number = total_node_number - server_number
     deploy_range = 15
     deploy_range_x = deploy_range
     deploy_range_y = deploy_range
     transmit_range = 3
     min_distance_between_nodes = 2.6
-    min_distance_between_nodes_square = min_distance_between_nodes**2
-    
-    move_step_length_event = 1		# The movement speed of event. 
-    move_step_length_header = 1		# The movement speed of cluster header.
+    min_distance_between_nodes_square = min_distance_between_nodes ** 2
+
+    move_step_length_event = 1  # The movement speed of event.
+    move_step_length_header = 1  # The movement speed of cluster header.
     expand_rate = 0.8
     shrink_rate = 1.25
-    
-    event_detection_range = transmit_range * 2		# The event can be found in the neighbor area of the sensor node. 
+
+    event_detection_range = transmit_range * 2  # The event can be found in the neighbor area of the sensor node.
     event_detection_range_square = event_detection_range ** 2
-    event_data_increase_rate = 3					# The data size once the moving event is detected by the sensors.
+    event_data_increase_rate = 3  # The data size once the moving event is detected by the sensors.
     max_find_good_position_time = 5
-    max_balance_diff = 0.8							# The game is over once the cluster is unbalanced over this threshold value.
-    
+    max_balance_diff = 0.8  # The game is over once the cluster is unbalanced over this threshold value.
+
     # The setup parameters of DQN.
     epoch = 10000
     game_time = 50
@@ -499,34 +498,33 @@ if __name__ == "__main__":
     epsilon = 1.0
     epsilon_min = 0.01
     epsilon_decay = 0.9995
-    
+
     # Actions of the the DQN model.
 
-    model_action_number =7
+    model_action_number = 7
     total_location_dim = 2
     total_behavior_dim = 9
-    model_input_size = total_node_number**2 + total_node_number + total_node_number + total_location_dim + total_behavior_dim  # [neighbor connectivity matrix] + [cluster ID of nodes].
+    model_input_size = total_node_number ** 2 + total_node_number + total_node_number + total_location_dim + total_behavior_dim  # [neighbor connectivity matrix] + [cluster ID of nodes].
     model_output_size = server_number * model_action_number
-    
+
     # DNN parameters.
     hidden_size0 = 600
     hidden_size1 = 300
     hidden_size2 = 150
-    max_memory = 2000 
-    batch_size = 20
+    max_memory = 2000
+    batch_size = 60
 
     grid_size = 0.025
     grid_size_x = grid_size
     grid_size_y = grid_size
 
-    env = Cluster()		# Init the simulation environment.
-    exp_replay = ExperienceReplay(epsilon)
-    save_state_xcor = env.state_xcor		# Save the coordinate values, the values are used for benchmark solutions. 
-    save_state_ycor = env.state_ycor
-    # env.draw_network()
-
     grid_num_x = int(deploy_range_x // grid_size_x + 1)
     grid_num_y = int(deploy_range_y // grid_size_y + 1)
+    env = Cluster()  # Init the simulation environment.
+    exp_replay = ExperienceReplay(epsilon)
+    save_state_xcor = env.state_xcor  # Save the coordinate values, the values are used for benchmark solutions.
+    save_state_ycor = env.state_ycor
+    # env.draw_network()
 
     best_method_reward = np.zeros((grid_num_x+1, grid_num_y+1))
     best_method_reward.fill(np.nan)
@@ -534,8 +532,8 @@ if __name__ == "__main__":
     best_method_state = np.zeros(((grid_num_x+1) * (grid_num_y+1), server_number*3))  # every cluster head has x_cor y_cor and weight
     best_method_state.fill(np.nan)  # create a nan np array to store best rewards and its state
 
-    np.savetxt('best_method_reward', best_method_reward)
-    np.savetxt('best_method_state', best_method_state)
+    #np.savetxt('best_method_reward', best_method_reward)
+    #np.savetxt('best_method_state', best_method_state)
 
     for a in range(epoch):
         env.init_states()
@@ -554,6 +552,7 @@ if __name__ == "__main__":
             sta_ticks = sta_ticks + 1
             action = env.act_action(mem_state, tick)
             reward, state = env.act_reward(tick)
+            '''
             # ================ Recording the best solution ==============================================
             x = int(round(env.state_event_xcor/grid_size_x))
             y = int(round(env.state_event_ycor/grid_size_y))
@@ -571,6 +570,7 @@ if __name__ == "__main__":
                 cluster_head_state = env.state_cluster_core_xcor + env.state_cluster_core_ycor + env.weight_cluster
                 best_method_state[dim_transfer] = cluster_head_state
             # ================ End recording the best solution ==========================================
+            '''
             if flag_gameover_mode == 1:
                 game_over = env.check_flow_in_network_fail()
             
@@ -595,21 +595,20 @@ if __name__ == "__main__":
             if total_tick >= len(env.trace_dir_output):
                 total_tick = 0
 
-        np.savetxt('best_method_reward', best_method_reward)
-        np.savetxt('best_method_state', best_method_state)                          #Save best rewards and their states
+        #np.savetxt('best_method_reward', best_method_reward)
+        #np.savetxt('best_method_state', best_method_state)                          #Save best rewards and their states
         print("Epoch {:03d}/{} | Average Reward {}".format(a, epoch, round(sta_sum_reward/sta_ticks, 2)))
         print("total tick {}".format(total_tick))
-        '''
-        f = open('DRL_results_real_data_new.txt', 'a+')
+
+        f = open('DRL_model_convergence/DRL_results_real_data_new.txt', 'a+')
         f.write("%s\n" % (sta_sum_reward/sta_ticks))
         f.close()
         print("====================================================================================================================")
 
     # serialize model to JSON
     model_json = exp_replay.model.to_json()
-    with open("DRL_model.json", "w") as json_file:
+    with open("DRL_model_new/DRL_model_full_data.json", "w") as json_file:
         json_file.write(model_json)
     # serialize weights to HDF5
-    exp_replay.model.save_weights("DRL_model.h5")
+    exp_replay.model.save_weights("DRL_model_new/DRL_model_full_data.h5")
     print("Saved model to disk")
-        '''

@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="521ef6e0-97cb-4e38-99b8-131117d5f931" name="Default Changelist" comment="" />
+    <list default="true" id="521ef6e0-97cb-4e38-99b8-131117d5f931" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/partition-clusters-weighter_voronoi+DDQN + external_movement + behavior_sensing+best_method_memory.py" beforeDir="false" afterPath="$PROJECT_DIR$/partition-clusters-weighter_voronoi+DDQN + external_movement + behavior_sensing+best_method_memory.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/partition_train_without_LSTM.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/read_AGV_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/read_AGV_data.py" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -14,15 +20,6 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/partition-clusters-v3-4clusters-comments.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="597">
-              <caret line="556" column="8" selection-start-line="556" selection-start-column="8" selection-end-line="568" selection-end-column="40" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/partition-clusters-final_with_data_imagination.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="342">
@@ -31,57 +28,23 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/partition_train_without_LSTM.py">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/read_AGV_data.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="587" column="35" lean-forward="true" selection-start-line="587" selection-start-column="35" selection-end-line="587" selection-end-column="35" />
+            <state relative-caret-position="675">
+              <caret line="63" column="51" selection-start-line="63" selection-start-column="20" selection-end-line="63" selection-end-column="51" />
+              <folding>
+                <element signature="e#0#18#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/partition-clusters-weighter_voronoi+DDQN + external_movement + behavior_sensing+best_method_memory.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="294">
-              <caret line="414" column="28" selection-start-line="414" selection-start-column="11" selection-end-line="414" selection-end-column="28" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/partition-clusters-v3-4clusters-static.py">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/implement_naive_DRL.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="762">
-              <caret line="577" column="8" selection-start-line="577" selection-start-column="8" selection-end-line="577" selection-end-column="8" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/results/dqn_testing_without_sufficient_data_tackling_overfitting_50%.txt">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/implement_naive_DRL_test.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="8610">
-              <caret line="574" column="103" selection-start-line="574" selection-start-column="29" selection-end-line="574" selection-end-column="103" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/DRL_results_real_data_new.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15000">
-              <caret line="1000" column="13" selection-start-line="1000" selection-start-column="13" selection-end-line="1000" selection-end-column="13" />
+            <state relative-caret-position="221">
+              <caret line="576" column="25" lean-forward="true" selection-start-line="576" selection-start-column="25" selection-end-line="576" selection-end-column="25" />
             </state>
           </provider>
         </entry>
@@ -89,8 +52,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/results/plt_convergence_with_insufficient_data_overfitting_reduction.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="17" column="7" selection-start-line="17" selection-start-column="7" selection-end-line="17" selection-end-column="7" />
+            <state>
+              <caret line="1" column="18" selection-start-line="1" selection-start-column="18" selection-end-line="1" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -99,7 +62,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>50</find>
       <find>9</find>
       <find>21</find>
       <find>training</find>
@@ -111,14 +73,12 @@
       <find>test</find>
       <find>DRL</find>
       <find>Epoch</find>
-      <find>batch_size</find>
       <find>replay</find>
       <find>act_move_events</find>
       <find>total_tick</find>
       <find>predict</find>
       <find>1000</find>
       <find>DR</find>
-      <find>AGV</find>
       <find>act_action</find>
       <find>act_move</find>
       <find>[0]</find>
@@ -129,7 +89,13 @@
       <find>epsilon</find>
       <find>total_behavior_dim</find>
       <find>deca</find>
+      <find>setup_parameters</find>
+      <find>AGV</find>
+      <find>batch_size</find>
     </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -171,7 +137,6 @@
         <option value="$PROJECT_DIR$/plt_final_converge.py" />
         <option value="$PROJECT_DIR$/plt_final_comparison.py" />
         <option value="$PROJECT_DIR$/plt_test.py" />
-        <option value="$PROJECT_DIR$/read_AGV_data.py" />
         <option value="$PROJECT_DIR$/results/plt_converge.py" />
         <option value="$PROJECT_DIR$/implement_DQN+RNN_prediction.py" />
         <option value="$PROJECT_DIR$/implement_DQN+RNN_prediction_test.py" />
@@ -181,17 +146,22 @@
         <option value="$PROJECT_DIR$/results/dqn_training_full_training_data_tackling_overfitting.txt" />
         <option value="$PROJECT_DIR$/implement_naive_DRL.py" />
         <option value="$PROJECT_DIR$/partition-clusters-v3-4clusters-comments.py" />
-        <option value="$PROJECT_DIR$/partition-clusters-weighter_voronoi+DDQN + external_movement + behavior_sensing+best_method_memory.py" />
         <option value="$PROJECT_DIR$/partition-clusters-final_with_data_imagination.py" />
         <option value="$PROJECT_DIR$/partition_train_without_LSTM.py" />
+        <option value="$PROJECT_DIR$/All_parameters.py" />
+        <option value="$PROJECT_DIR$/read_AGV_data.py" />
+        <option value="$PROJECT_DIR$/partition-clusters-weighter_voronoi+DDQN + external_movement + behavior_sensing+best_method_memory.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="633" />
     <option name="y" value="259" />
     <option name="width" value="1835" />
     <option name="height" value="1053" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -208,16 +178,6 @@
             </path>
             <path>
               <item name="clustering" type="b2602c69:ProjectViewProjectNode" />
-              <item name="clustering" type="462c0819:PsiDirectoryNode" />
-              <item name="DRL models" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="clustering" type="b2602c69:ProjectViewProjectNode" />
-              <item name="clustering" type="462c0819:PsiDirectoryNode" />
-              <item name="results" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="clustering" type="b2602c69:ProjectViewProjectNode" />
               <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
             </path>
           </expand>
@@ -227,7 +187,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../A game" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
@@ -249,7 +209,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.plt_convergence_with_insufficient_data_overfitting_reduction">
+  <component name="RunManager" selected="Python.partition-clusters-weighter_voronoi+DDQN + external_movement + behavior_sensing+best_method_memory">
     <configuration name="implement_naive_DRL" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="clustering" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -364,9 +324,9 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.partition-clusters-weighter_voronoi+DDQN + external_movement + behavior_sensing+best_method_memory" />
         <item itemvalue="Python.plt_convergence_with_insufficient_data_overfitting_reduction" />
         <item itemvalue="Python.partition_train_without_LSTM" />
-        <item itemvalue="Python.partition-clusters-weighter_voronoi+DDQN + external_movement + behavior_sensing+best_method_memory" />
         <item itemvalue="Python.partition-clusters-v3-4clusters-comments" />
         <item itemvalue="Python.implement_naive_DRL" />
       </list>
@@ -395,14 +355,14 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="79" y="25" width="2481" height="1415" extended-state="6" />
+    <frame x="79" y="25" width="2481" height="1415" extended-state="7" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49930266" visible="true" weight="0.26525632" />
       <window_info id="Structure" order="1" sideWeight="0.5006974" side_tool="true" weight="0.2519252" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32841614" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.2515528" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.2511664" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3998447" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -415,28 +375,8 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
     </layout>
-    <layout-to-restore>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49930266" weight="0.3598234" />
-      <window_info id="Structure" order="1" sideWeight="0.5006974" side_tool="true" weight="0.2519252" />
-      <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32841614" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.34989202" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.3998447" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.3297414" />
-      <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.32996893" />
-      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="bottom" id="Python Console" order="10" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-    </layout-to-restore>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/DRL_results_real_data.txt" />
     <entry file="file://$PROJECT_DIR$/dqn_results_best_method_mem.txt" />
     <entry file="file://$PROJECT_DIR$/test_pos_prediction.py" />
     <entry file="file://$PROJECT_DIR$/state_xcor.txt">
@@ -451,44 +391,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DQN_results_Final_augmented.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dqn_results_Final_with_combined_prob.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AGV_trace_grided_without_time_stampe.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="267">
-          <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dqn_results_test_with_behavior.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="862">
-          <caret line="166" lean-forward="true" selection-start-line="166" selection-end-line="166" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dqn_results_test.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/best_method_reward">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="862">
-          <caret line="601" lean-forward="true" selection-start-line="601" selection-end-line="601" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/best_method_state">
-      <provider selected="true" editor-type-id="LargeFileEditor" />
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="125" column="47" selection-start-line="125" selection-start-column="47" selection-end-line="125" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/DQN_results_Final_augmented.txt" />
+    <entry file="file://$PROJECT_DIR$/dqn_results_Final_with_combined_prob.txt" />
+    <entry file="file://$PROJECT_DIR$/AGV_trace_grided_without_time_stampe.py" />
+    <entry file="file://$PROJECT_DIR$/dqn_results_test_with_behavior.txt" />
+    <entry file="file://$PROJECT_DIR$/dqn_results_test.txt" />
+    <entry file="file://$PROJECT_DIR$/best_method_reward" />
+    <entry file="file://$PROJECT_DIR$/best_method_state" />
     <entry file="file://$USER_HOME$/.local/lib/python3.6/site-packages/pandas/core/internals/construction.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
@@ -503,37 +412,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dqn_results_test_without_behavior.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dqn_results_steps_weighted.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AGV_trace_imagined.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="34" column="23" selection-start-line="34" selection-start-column="23" selection-end-line="34" selection-end-column="23" />
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dqn_results_Final_naive_DRL.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-73463">
-          <caret line="49" column="17" selection-start-line="49" selection-start-column="17" selection-end-line="49" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dqn_results_Final_without_sufficient_data.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1433" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dqn_results_Final_static.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/dqn_results_test_without_behavior.txt" />
+    <entry file="file://$PROJECT_DIR$/dqn_results_steps_weighted.txt" />
+    <entry file="file://$PROJECT_DIR$/AGV_trace_imagined.py" />
+    <entry file="file://$PROJECT_DIR$/dqn_results_Final_naive_DRL.txt" />
+    <entry file="file://$PROJECT_DIR$/dqn_results_Final_without_sufficient_data.txt" />
+    <entry file="file://$PROJECT_DIR$/dqn_results_Final_static.txt" />
     <entry file="file://$USER_HOME$/.local/lib/python3.6/site-packages/numpy/lib/polynomial.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="297">
@@ -541,45 +425,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dqn_results_with_naive_model_and_insufficient_data.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-233" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DQN_results_Final.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3015">
-          <caret line="201" selection-end-line="201" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/results/dqn_training_without_sufficient_data_tackling_overfitting.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="485">
-          <caret line="228" column="18" selection-start-line="228" selection-start-column="18" selection-end-line="228" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pos_prediction_grided.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-305">
-          <caret line="72" column="37" selection-start-line="72" selection-start-column="29" selection-end-line="72" selection-end-column="37" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/read_AGV_data.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="173" column="72" selection-start-line="173" selection-start-column="72" selection-end-line="173" selection-end-column="72" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/dqn_results_with_naive_model_and_insufficient_data.txt" />
+    <entry file="file://$PROJECT_DIR$/DQN_results_Final.txt" />
+    <entry file="file://$PROJECT_DIR$/results/dqn_training_without_sufficient_data_tackling_overfitting.txt" />
+    <entry file="file://$PROJECT_DIR$/pos_prediction_grided.py" />
     <entry file="file://$PROJECT_DIR$/plt.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="735">
@@ -611,9 +460,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/agv1_pose.log">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/agv1_pose.log" />
     <entry file="file://$PROJECT_DIR$/implement_DQN+RNN_prediction.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="430">
@@ -631,13 +478,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/implement_DQN+RNN_prediction_test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="556" column="57" selection-start-line="556" selection-start-column="32" selection-end-line="556" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/implement_DQN+RNN_prediction_test.py" />
     <entry file="file://$PROJECT_DIR$/results/plt_converge.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="176">
@@ -645,19 +486,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="44" selection-start-line="4" selection-start-column="44" selection-end-line="4" selection-end-column="44" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/results/dqn_training_full_training_data_tackling_overfitting.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/test.py" />
+    <entry file="file://$PROJECT_DIR$/results/dqn_training_full_training_data_tackling_overfitting.txt" />
     <entry file="file://$PROJECT_DIR$/implement_static_clustering.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="7785">
@@ -665,47 +495,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/results/dqn_testing_without_sufficient_data_tackling_overfitting_50%.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/implement_naive_DRL_test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="8610">
-          <caret line="574" column="103" selection-start-line="574" selection-start-column="29" selection-end-line="574" selection-end-column="103" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DRL_results_real_data_new.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15000">
-          <caret line="1000" column="13" selection-start-line="1000" selection-start-column="13" selection-end-line="1000" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/results/plt_convergence_with_insufficient_data_overfitting_reduction.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="17" column="7" selection-start-line="17" selection-start-column="7" selection-end-line="17" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/partition-clusters-v3-4clusters-static.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/partition-clusters-weighter_voronoi+DDQN + external_movement + behavior_sensing.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2212">
-          <caret line="19" column="13" selection-start-line="19" selection-start-column="10" selection-end-line="19" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/implement_naive_DRL.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="762">
-          <caret line="577" column="8" selection-start-line="577" selection-start-column="8" selection-end-line="577" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/results/dqn_testing_without_sufficient_data_tackling_overfitting_50%.txt" />
+    <entry file="file://$PROJECT_DIR$/implement_naive_DRL_test.py" />
+    <entry file="file://$PROJECT_DIR$/DRL_results_real_data_new.txt" />
+    <entry file="file://$PROJECT_DIR$/partition-clusters-v3-4clusters-static.py" />
+    <entry file="file://$PROJECT_DIR$/partition-clusters-weighter_voronoi+DDQN + external_movement + behavior_sensing.py" />
+    <entry file="file://$PROJECT_DIR$/implement_naive_DRL.py" />
     <entry file="file://$USER_HOME$/.local/lib/python3.6/site-packages/keras/engine/training_utils.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="312">
@@ -720,20 +515,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/partition-clusters-weighter_voronoi+DDQN + external_movement + behavior_sensing+best_method_memory.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="414" column="28" selection-start-line="414" selection-start-column="11" selection-end-line="414" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/partition-clusters-v3-4clusters-comments.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="597">
-          <caret line="556" column="8" selection-start-line="556" selection-start-column="8" selection-end-line="568" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/partition-clusters-v3-4clusters-comments.py" />
     <entry file="file://$PROJECT_DIR$/partition-clusters-final_with_data_imagination.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="342">
@@ -741,10 +523,41 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/All_parameters.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/partition_train_without_LSTM.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="587" column="35" lean-forward="true" selection-start-line="587" selection-start-column="35" selection-end-line="587" selection-end-column="35" />
+        <state relative-caret-position="-6484">
+          <caret line="19" column="29" selection-start-line="19" selection-start-column="29" selection-end-line="19" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/results/plt_convergence_with_insufficient_data_overfitting_reduction.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="1" column="18" selection-start-line="1" selection-start-column="18" selection-end-line="1" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/read_AGV_data.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="675">
+          <caret line="63" column="51" selection-start-line="63" selection-start-column="20" selection-end-line="63" selection-end-column="51" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/partition-clusters-weighter_voronoi+DDQN + external_movement + behavior_sensing+best_method_memory.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="576" column="25" lean-forward="true" selection-start-line="576" selection-start-column="25" selection-end-line="576" selection-end-column="25" />
         </state>
       </provider>
     </entry>
