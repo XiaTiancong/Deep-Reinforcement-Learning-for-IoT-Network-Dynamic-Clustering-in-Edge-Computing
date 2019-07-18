@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="521ef6e0-97cb-4e38-99b8-131117d5f931" name="Default Changelist" comment="">
 <<<<<<< HEAD
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/.idea/clustering.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/clustering.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
@@ -39,6 +40,13 @@
       <change beforePath="$PROJECT_DIR$/plt_final_converge.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/plt_test.py" beforeDir="false" />
 >>>>>>> e7594b6d37871e572756819f8cf03640c49d8dcf
+=======
+      <change afterPath="$PROJECT_DIR$/DRL_model_convergence_experiment/plt_convergence.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DRL_model_convergence_experiment/DRL_results_real_data_new.txt" beforeDir="false" afterPath="$PROJECT_DIR$/DRL_model_convergence_experiment/DRL_results_real_data_new.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DRL_model_experiment/DRL_model_full_data.h5" beforeDir="false" afterPath="$PROJECT_DIR$/DRL_model_experiment/DRL_model_full_data.h5" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DRL_model_experiment/DRL_model_full_data.json" beforeDir="false" afterPath="$PROJECT_DIR$/DRL_model_experiment/DRL_model_full_data.json" afterDir="false" />
+>>>>>>> 1ed36a1504c3cae322e11fbfe641317e45cf0493
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -52,6 +60,7 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
+<<<<<<< HEAD
         <entry file="file://$PROJECT_DIR$/partition-clusters-final_with_data_imagination.py">
           <provider selected="true" editor-type-id="text-editor">
 <<<<<<< HEAD
@@ -71,6 +80,8 @@
             <state relative-caret-position="1786">
               <caret line="587" column="35" selection-start-line="587" selection-start-column="35" selection-end-line="587" selection-end-column="35" />
 =======
+=======
+>>>>>>> 1ed36a1504c3cae322e11fbfe641317e45cf0493
         <entry file="file://$PROJECT_DIR$/read_AGV_data.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="675">
@@ -140,13 +151,33 @@
         <entry file="file://$PROJECT_DIR$/implement_DQN+RNN_prediction.py">
           <provider selected="true" editor-type-id="text-editor">
 <<<<<<< HEAD
+<<<<<<< HEAD
             <state relative-caret-position="8655">
               <caret line="577" column="8" selection-start-line="577" selection-start-column="8" selection-end-line="577" selection-end-column="8" />
 =======
             <state relative-caret-position="150">
+=======
+            <state relative-caret-position="-255">
+>>>>>>> 1ed36a1504c3cae322e11fbfe641317e45cf0493
               <caret line="484" column="4" selection-start-line="484" selection-start-column="4" selection-end-line="524" selection-end-column="59" />
 >>>>>>> e7594b6d37871e572756819f8cf03640c49d8dcf
             </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/DRL_model_convergence_experiment/plt_convergence.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="465">
+              <caret line="32" column="3" selection-start-line="32" selection-start-column="3" selection-end-line="32" selection-end-column="3" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/clustering_with_real_world_data_training.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-8389" />
           </provider>
         </entry>
       </file>
@@ -155,15 +186,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="906">
               <caret line="519" column="30" selection-start-line="519" selection-start-column="30" selection-end-line="519" selection-end-column="30" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/partition-clusters-weighter_voronoi+DDQN + external_movement + behavior_sensing+best_method_memory.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="611">
-              <caret line="602" column="49" selection-start-line="602" selection-start-column="49" selection-end-line="602" selection-end-column="49" />
             </state>
           </provider>
         </entry>
@@ -226,7 +248,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/test1.py" />
         <option value="$PROJECT_DIR$/plt_scatter.py" />
         <option value="$PROJECT_DIR$/bouncing_ball.py" />
         <option value="$PROJECT_DIR$/bouncing_ball_grided.py" />
@@ -277,6 +298,7 @@
         <option value="$PROJECT_DIR$/implement_DQN+RNN_prediction.py" />
         <option value="$PROJECT_DIR$/Server_API_for_EndNodes.py" />
         <option value="$PROJECT_DIR$/partition-clusters-weighter_voronoi+DDQN + external_movement + behavior_sensing+best_method_memory.py" />
+        <option value="$PROJECT_DIR$/DRL_model_convergence_experiment/plt_convergence.py" />
       </list>
     </option>
   </component>
@@ -308,6 +330,7 @@
             <path>
               <item name="clustering" type="b2602c69:ProjectViewProjectNode" />
 <<<<<<< HEAD
+<<<<<<< HEAD
               <item name="clustering" type="462c0819:PsiDirectoryNode" />
               <item name="DRL models" type="462c0819:PsiDirectoryNode" />
             </path>
@@ -316,6 +339,13 @@
               <item name="clustering" type="462c0819:PsiDirectoryNode" />
               <item name="results" type="462c0819:PsiDirectoryNode" />
 =======
+=======
+              <item name="clustering" type="462c0819:PsiDirectoryNode" />
+              <item name="DRL_model_convergence_experiment" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="clustering" type="b2602c69:ProjectViewProjectNode" />
+>>>>>>> 1ed36a1504c3cae322e11fbfe641317e45cf0493
               <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
 >>>>>>> e7594b6d37871e572756819f8cf03640c49d8dcf
             </path>
@@ -327,11 +357,12 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$USER_HOME$/PycharmProjects/clustering" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/DRL_model_convergence_experiment" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/DRL models" />
       <recent name="$PROJECT_DIR$/results" />
@@ -349,7 +380,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.partition-clusters-weighter_voronoi+DDQN + external_movement + behavior_sensing+best_method_memory">
+  <component name="RunManager" selected="Python.plt_convergence">
     <configuration name="LSTM" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="clustering" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -371,7 +402,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="partition-clusters-v3-4clusters-comments" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="clustering_with_real_world_data_training" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="clustering" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -383,7 +414,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/partition-clusters-v3-4clusters-comments.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/clustering_with_real_world_data_training.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -413,7 +444,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="partition_train_without_LSTM" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="plt_convergence" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="clustering" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -421,11 +452,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/DRL_model_convergence_experiment" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/partition_train_without_LSTM.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/DRL_model_convergence_experiment/plt_convergence.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -457,18 +488,18 @@
     </configuration>
     <list>
       <item itemvalue="Python.plt_convergence_with_insufficient_data_overfitting_reduction" />
-      <item itemvalue="Python.partition-clusters-v3-4clusters-comments" />
-      <item itemvalue="Python.partition_train_without_LSTM" />
       <item itemvalue="Python.partition-clusters-weighter_voronoi+DDQN + external_movement + behavior_sensing+best_method_memory" />
       <item itemvalue="Python.LSTM" />
+      <item itemvalue="Python.clustering_with_real_world_data_training" />
+      <item itemvalue="Python.plt_convergence" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.plt_convergence" />
+        <item itemvalue="Python.clustering_with_real_world_data_training" />
         <item itemvalue="Python.partition-clusters-weighter_voronoi+DDQN + external_movement + behavior_sensing+best_method_memory" />
         <item itemvalue="Python.LSTM" />
         <item itemvalue="Python.plt_convergence_with_insufficient_data_overfitting_reduction" />
-        <item itemvalue="Python.partition_train_without_LSTM" />
-        <item itemvalue="Python.partition-clusters-v3-4clusters-comments" />
       </list>
     </recent_temporary>
   </component>
@@ -502,7 +533,6 @@
       <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49930266" visible="true" weight="0.26522002" />
 =======
     <frame x="79" y="25" width="2481" height="1415" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49930266" visible="true" weight="0.26525632" />
 >>>>>>> e7594b6d37871e572756819f8cf03640c49d8dcf
@@ -525,6 +555,7 @@
     </layout>
   </component>
   <component name="editorHistoryManager">
+<<<<<<< HEAD
 <<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/test_pos_prediction.py" />
     <entry file="file://$PROJECT_DIR$/state_xcor.txt">
@@ -600,6 +631,8 @@
 =======
     <entry file="file://$PROJECT_DIR$/DQN_results_Final_augmented.txt" />
     <entry file="file://$PROJECT_DIR$/dqn_results_Final_with_combined_prob.txt" />
+=======
+>>>>>>> 1ed36a1504c3cae322e11fbfe641317e45cf0493
     <entry file="file://$PROJECT_DIR$/AGV_trace_grided_without_time_stampe.py" />
     <entry file="file://$PROJECT_DIR$/dqn_results_test_with_behavior.txt" />
     <entry file="file://$PROJECT_DIR$/dqn_results_test.txt" />
@@ -871,6 +904,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/implement_always_best_method.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/partition-clusters-weighter_voronoi+DDQN + external_movement + behavior_sensing+best_method_memory.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="611">
+          <caret line="602" column="50" selection-start-line="602" selection-start-column="18" selection-end-line="602" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/implement_static_clustering.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="906">
@@ -880,19 +923,26 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/implement_DQN+RNN_prediction.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
+        <state relative-caret-position="-255">
           <caret line="484" column="4" selection-start-line="484" selection-start-column="4" selection-end-line="524" selection-end-column="59" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/implement_always_best_method.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/partition-clusters-weighter_voronoi+DDQN + external_movement + behavior_sensing+best_method_memory.py">
+    <entry file="file://$PROJECT_DIR$/clustering_with_real_world_data_training.py">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-8389" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DRL_model_convergence_experiment/plt_convergence.py">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="611">
           <caret line="602" column="49" selection-start-line="602" selection-start-column="49" selection-end-line="602" selection-end-column="49" />
 >>>>>>> e7594b6d37871e572756819f8cf03640c49d8dcf
+=======
+        <state relative-caret-position="465">
+          <caret line="32" column="3" selection-start-line="32" selection-start-column="3" selection-end-line="32" selection-end-column="3" />
+>>>>>>> 1ed36a1504c3cae322e11fbfe641317e45cf0493
         </state>
       </provider>
     </entry>
