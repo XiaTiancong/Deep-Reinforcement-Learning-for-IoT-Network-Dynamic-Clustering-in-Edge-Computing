@@ -491,13 +491,13 @@ if __name__ == "__main__":
     max_balance_diff = 0.8  # The game is over once the cluster is unbalanced over this threshold value.
 
     # The setup parameters of DQN.
-    epoch = 10000
+    epoch = 2000
     game_time = 50
     learning_rate = 0.0001
     discount = 0.5
     epsilon = 1.0
     epsilon_min = 0.01
-    epsilon_decay = 0.9995
+    epsilon_decay = 0.9996
 
     # Actions of the the DQN model.
 
@@ -512,7 +512,7 @@ if __name__ == "__main__":
     hidden_size1 = 300
     hidden_size2 = 150
     max_memory = 2000
-    batch_size = 50
+    batch_size = 40
 
     grid_size = 0.025
     grid_size_x = grid_size

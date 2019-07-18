@@ -20,7 +20,7 @@ class AGV:
         self.data_proportion = data_proportion
         if mode == 'training':
             for i in range(1,7):
-                self.f = open("../agv_data/agv1_pose" + str(i) + ".log", "r")
+                self.f = open("agv_data/agv1_pose" + str(i) + ".log", "r")
                 for line in self.f:
                     if "seq:" in line:
                         seq_pattern = re.compile('(?<=seq: )\d*')
@@ -264,12 +264,16 @@ class AGV:
     def fit_to_canvas(self, df, scale):
 
         x = df.to_dict(orient='list')['pos_x']
-        y = df.to_dict(orient='list')['pos_y']
-        extreme_points = [[max(x+y)], [min(x+y)]]
+        extreme_points = [[max(x)], [min(x)]]
         scaler = MinMaxScaler(feature_range=(0, scale))
         scaler.fit(extreme_points)
-        df['pos_x'] = scaler.transform(np.reshape(x, (-1,1)))
-        df['pos_y'] = scaler.transform(np.reshape(y, (-1,1)))
+        df['pos_x'] = scaler.transform(np.reshape(x, (-1, 1)))
+
+        y = df.to_dict(orient='list')['pos_y']
+        extreme_points_y = [[max(y)], [min(y)]]
+        scaler_y = MinMaxScaler(feature_range=(0, scale))
+        scaler_y.fit(extreme_points_y)
+        df['pos_y'] = scaler_y.transform(np.reshape(y, (-1,1)))
         return df
 
     def trace_grided(self, df, grid_size):

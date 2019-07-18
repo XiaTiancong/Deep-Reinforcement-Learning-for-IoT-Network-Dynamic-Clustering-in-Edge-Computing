@@ -20,12 +20,12 @@ from keras.optimizers import Adam
 from read_AGV_data import AGV
 import re
 
-RNN_json_file = open('model_action_prediction.json', 'r')
+RNN_json_file = open('LSTM models/LSTM_full_data.json', 'r')
 loaded_model_json_ = RNN_json_file.read()
 RNN_json_file.close()
 RNN_model = model_from_json(loaded_model_json_)
 # load weights into new model
-RNN_model.load_weights("model_action_prediction.h5")
+RNN_model.load_weights("LSTM models/LSTM_full_data.h5")
 print("Loaded RNN model from disk")
 
 class Cluster(object,):
@@ -562,7 +562,7 @@ if __name__ == "__main__":
     flag_gameover_mode = 0			# 0: the game last for a specific time length; 1: the game ends once the cluster is unbalanced over a threshold. 
     Dueling = True
     read_AGV = True
-    transfer_learning = True
+    transfer_learning = False
     Data_imagination = True
     threshold = 0.3                 # speed threshold for targets
     sample_period = 0.5             # target movement sample rate
@@ -592,13 +592,13 @@ if __name__ == "__main__":
     max_balance_diff = 0.8							# The game is over once the cluster is unbalanced over this threshold value.
     
     # The setup parameters of DQN.
-    epoch = 10000
+    epoch = 5000
     game_time = 50
     learning_rate = 0.0001
     discount = 0.5
     epsilon = 1
     epsilon_min = 0.01
-    epsilon_decay = 0.99995
+    epsilon_decay = 0.99997
 
     # Actions of the the DQN model.
 
@@ -613,7 +613,7 @@ if __name__ == "__main__":
     hidden_size1 = 300
     hidden_size2 = 150
     max_memory = 2000 
-    batch_size = 20
+    batch_size = 40
 
     grid_size = 0.025
     grid_size_x = grid_size
@@ -701,11 +701,11 @@ if __name__ == "__main__":
             if total_tick >= 5000 or env.if_stuck == True:
                 total_tick = 0
                 starting_point = np.random.randint(len(x_poses))
-        np.savetxt('best_method_reward', best_method_reward)
-        np.savetxt('best_method_state', best_method_state)                          #Save best rewards and their states
+        #np.savetxt('best_method_reward', best_method_reward)
+        #np.savetxt('best_method_state', best_method_state)                          #Save best rewards and their states
         print("Epoch {:03d}/{} | Average Reward {}".format(a, epoch, round(sta_sum_reward/sta_ticks, 2)))
         print("total tick {}".format(total_tick))
-        f = open('DQN_results_Final.txt', 'a+')
+        f = open('DRL_model_convergence_experiment/DRL_model_full_synthetic_data.txt', 'a+')
         f.write("%s\n" % (sta_sum_reward/sta_ticks))
         f.close()
         print("====================================================================================================================")
@@ -714,8 +714,8 @@ if __name__ == "__main__":
         if a%100 == 0:
             # serialize model to JSON
             model_json = exp_replay.model.to_json()
-            with open("DRL_model_Final_augmented.json", "w") as json_file:
+            with open("DRL_model_experiment/DRL_model_full_synthetic_data.json", "w") as json_file:
                 json_file.write(model_json)
             # serialize weights to HDF5
-            exp_replay.model.save_weights("DRL_model_Final_augmented.h5")
+            exp_replay.model.save_weights("DRL_model_experiment/DRL_model_full_synthetic_data.h5")
             print("Saved augmented model to disk")

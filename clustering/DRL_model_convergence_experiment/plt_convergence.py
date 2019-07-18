@@ -9,7 +9,7 @@ def moving_average(a, n=20):
     return ret[n - 1:] / n
 
 average_reward = []
-f = open("DRL_results_real_data_new.txt", "r")    #dqn_results_with_naive_model_and_insufficient_data
+f = open("DRL_model_full_synthetic_data.txt", "r")    #dqn_results_with_naive_model_and_insufficient_data
 counter = 0
 for x in f:
     average_reward.append(float(x.strip()))
