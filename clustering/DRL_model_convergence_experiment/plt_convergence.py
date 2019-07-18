@@ -3,7 +3,7 @@ import numpy as np
 
 total_point_num = 1000
 
-def moving_average(a, n=50):
+def moving_average(a, n=20):
     ret = np.cumsum(a, dtype=float)
     ret[n:] = ret[n:] - ret[:-n]
     return ret[n - 1:] / n

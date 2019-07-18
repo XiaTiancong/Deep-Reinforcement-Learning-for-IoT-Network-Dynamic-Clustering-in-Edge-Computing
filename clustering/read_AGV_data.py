@@ -20,7 +20,7 @@ class AGV:
         self.data_proportion = data_proportion
         if mode == 'training':
             for i in range(1,7):
-                self.f = open("agv_data/agv1_pose" + str(i) + ".log", "r")
+                self.f = open("../agv_data/agv1_pose" + str(i) + ".log", "r")
                 for line in self.f:
                     if "seq:" in line:
                         seq_pattern = re.compile('(?<=seq: )\d*')
