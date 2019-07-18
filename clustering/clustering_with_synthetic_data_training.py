@@ -598,7 +598,7 @@ if __name__ == "__main__":
     discount = 0.5
     epsilon = 1
     epsilon_min = 0.01
-    epsilon_decay = 0.99995
+    epsilon_decay = 0.99997
 
     # Actions of the the DQN model.
 
@@ -701,8 +701,8 @@ if __name__ == "__main__":
             if total_tick >= 5000 or env.if_stuck == True:
                 total_tick = 0
                 starting_point = np.random.randint(len(x_poses))
-        np.savetxt('best_method_reward', best_method_reward)
-        np.savetxt('best_method_state', best_method_state)                          #Save best rewards and their states
+        #np.savetxt('best_method_reward', best_method_reward)
+        #np.savetxt('best_method_state', best_method_state)                          #Save best rewards and their states
         print("Epoch {:03d}/{} | Average Reward {}".format(a, epoch, round(sta_sum_reward/sta_ticks, 2)))
         print("total tick {}".format(total_tick))
         f = open('DRL_model_convergence_experiment/DRL_model_full_synthetic_data.txt', 'a+')
