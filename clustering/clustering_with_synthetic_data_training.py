@@ -20,12 +20,12 @@ from keras.optimizers import Adam
 from read_AGV_data import AGV
 import re
 
-RNN_json_file = open('LSTM models/LSTM_full_data.json', 'r')
+RNN_json_file = open('LSTM models/LSTM_50%_data.json', 'r')
 loaded_model_json_ = RNN_json_file.read()
 RNN_json_file.close()
 RNN_model = model_from_json(loaded_model_json_)
 # load weights into new model
-RNN_model.load_weights("LSTM models/LSTM_full_data.h5")
+RNN_model.load_weights("LSTM models/LSTM_50%_data.h5")
 print("Loaded RNN model from disk")
 
 class Cluster(object,):
@@ -634,8 +634,8 @@ if __name__ == "__main__":
     best_method_state = np.zeros(((grid_num_x+1) * (grid_num_y+1), server_number*3))  # every cluster head has x_cor y_cor and weight
     best_method_state.fill(np.nan)  # create a nan np array to store best rewards and its state
 
-    np.savetxt('best_method_reward', best_method_reward)
-    np.savetxt('best_method_state', best_method_state)
+    #np.savetxt('best_method_reward', best_method_reward)
+    #np.savetxt('best_method_state', best_method_state)
 
     x_poses = env.trace_grided[:, 0]
     starting_point = np.random.randint(len(x_poses))
@@ -705,7 +705,7 @@ if __name__ == "__main__":
         #np.savetxt('best_method_state', best_method_state)                          #Save best rewards and their states
         print("Epoch {:03d}/{} | Average Reward {}".format(a, epoch, round(sta_sum_reward/sta_ticks, 2)))
         print("total tick {}".format(total_tick))
-        f = open('DRL_model_convergence_experiment/DRL_model_full_synthetic_data.txt', 'a+')
+        f = open('DRL_model_convergence_experiment/DRL_model_50%_synthetic_data.txt', 'a+')
         f.write("%s\n" % (sta_sum_reward/sta_ticks))
         f.close()
         print("====================================================================================================================")
@@ -714,8 +714,8 @@ if __name__ == "__main__":
         if a%100 == 0:
             # serialize model to JSON
             model_json = exp_replay.model.to_json()
-            with open("DRL_model_experiment/DRL_model_full_synthetic_data.json", "w") as json_file:
+            with open("DRL_model_experiment/DRL_model_50%_synthetic_data.json", "w") as json_file:
                 json_file.write(model_json)
             # serialize weights to HDF5
-            exp_replay.model.save_weights("DRL_model_experiment/DRL_model_full_synthetic_data.h5")
+            exp_replay.model.save_weights("DRL_model_experiment/DRL_model_50%_synthetic_data.h5")
             print("Saved augmented model to disk")

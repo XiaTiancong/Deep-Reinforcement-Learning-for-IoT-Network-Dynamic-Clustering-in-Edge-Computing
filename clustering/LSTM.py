@@ -11,7 +11,7 @@ sample_period = 0.1
 grid_size = 0.025
 categorial = True
 
-agv = AGV('training')
+agv = AGV('training', 0.5)
 df = agv.get_df()
 df = agv.fit_to_canvas(df, 15)
 df_sampled = agv.identical_sample_rate(df, sample_period)
@@ -69,10 +69,10 @@ if categorial == True:
 
     # serialize model to JSON
     model_json = model.to_json()
-    with open("LSTM models/LSTM_full_data.json", "w") as json_file:
+    with open("LSTM models/LSTM_50%_data.json", "w") as json_file:
         json_file.write(model_json)
     # serialize weights to HDF5
-    model.save_weights("LSTM models/LSTM_full_data.h5")
+    model.save_weights("LSTM models/LSTM_50%_data.h5")
     print("Saved model to disk")
     print(test_dir_output[5])
 
