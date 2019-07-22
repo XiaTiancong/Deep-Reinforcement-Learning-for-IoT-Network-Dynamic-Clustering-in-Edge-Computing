@@ -14,12 +14,12 @@ ball.color("black")
 ball.speed(-1)
 ball.shape('circle')
 ball.hideturtle()
-RNN_json_file = open('model_action_prediction.json', 'r')
+RNN_json_file = open('../LSTM models/LSTM_full_data.json', 'r')
 loaded_model_json_ = RNN_json_file.read()
 RNN_json_file.close()
 RNN_model = model_from_json(loaded_model_json_)
 # load weights into new model
-RNN_model.load_weights("model_action_prediction.h5")
+RNN_model.load_weights("../LSTM models/LSTM_full_data.h5")
 print("Loaded RNN model from disk")
 time_steps = 60
 pos_buf = []

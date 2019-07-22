@@ -1,7 +1,11 @@
 import matplotlib.pyplot as plt
 import numpy as np
 
+<<<<<<< HEAD
 total_point_num = 2000
+=======
+total_point_num = 5000
+>>>>>>> 23e5fe5aa9c6b87fc7449cb91d2e9b132a05449b
 
 def moving_average(a, n=20):
     ret = np.cumsum(a, dtype=float)
@@ -9,7 +13,8 @@ def moving_average(a, n=20):
     return ret[n - 1:] / n
 
 average_reward = []
-f = open("DRL_model_50%_synthetic_data.txt", "r")    #dqn_results_with_naive_model_and_insufficient_data
+
+f = open("DRL_model_full_synthetic_data.txt", "r")    #DRL_results_real_data_new   #DRL_model_full_synthetic_dataS
 counter = 0
 for x in f:
     average_reward.append(float(x.strip()))
