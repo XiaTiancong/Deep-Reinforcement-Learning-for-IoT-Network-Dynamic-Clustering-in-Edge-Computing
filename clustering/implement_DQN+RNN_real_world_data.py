@@ -545,12 +545,12 @@ if __name__ == "__main__":
 
     #==================================== Load DQN and RNN model from json file====================================#
     if DQN_and_RNN_method:
-        DRL_json_file = open('DRL_model_experiment/DRL_model_full_synthetic_data.json', 'r')
+        DRL_json_file = open('DRL_model_experiment/DRL_model_full_data.json', 'r')
         loaded_model_json = DRL_json_file.read()
         DRL_json_file.close()
         DRL_model = model_from_json(loaded_model_json)
         # load weights into new model
-        DRL_model.load_weights("DRL_model_experiment/DRL_model_full_synthetic_data.h5")
+        DRL_model.load_weights("DRL_model_experiment/DRL_model_full_data.h5")
         print("Loaded DRL model from disk")
 
         RNN_json_file = open('LSTM models/LSTM_full_data.json', 'r')
@@ -719,7 +719,7 @@ if __name__ == "__main__":
 
         print("Epoch {:03d}/{} | Average Reward {}".format(a, epoch, round(sta_sum_reward / sta_ticks, 2)))
         print("total tick {}".format(total_tick))
-        f = open('DRL_test/dqn_results_full_synthetic_data.txt', 'a+')
+        f = open('DRL_test/dqn_results_full_real_world_data.txt', 'a+')
         f.write("%s\n" % (sta_sum_reward / sta_ticks))
         f.close()
         print("====================================================================================================================")
