@@ -1,11 +1,9 @@
 import matplotlib.pyplot as plt
 import numpy as np
 
-<<<<<<< HEAD
-total_point_num = 2000
-=======
+
+
 total_point_num = 5000
->>>>>>> 23e5fe5aa9c6b87fc7449cb91d2e9b132a05449b
 
 def moving_average(a, n=20):
     ret = np.cumsum(a, dtype=float)
@@ -14,7 +12,7 @@ def moving_average(a, n=20):
 
 average_reward = []
 
-f = open("DRL_model_full_synthetic_data.txt", "r")    #DRL_results_real_data_new   #DRL_model_full_synthetic_dataS
+f = open("DRL_model_50%_synthetic_data.txt", "r")    #DRL_results_real_data_new   #DRL_model_full_synthetic_dataS
 counter = 0
 for x in f:
     average_reward.append(float(x.strip()))
@@ -25,25 +23,28 @@ f.close()
 
 #average_reward = average_reward1 + average_reward
 average_reward = moving_average(average_reward)
-'''
+
 counter = 0
 average_reward2 = []
-f2 = open("dqn_results_test_with_behavior.txt", "r")
+f2 = open("DRL_model_full_synthetic_data.txt", "r")
 for x in f2:
     average_reward2.append(float(x.strip()))
     counter += 1
     if counter > total_point_num:
         break
-f1.close()
-'''
+f2.close()
+
+
+average_reward1 = moving_average(average_reward2)
+
 x = np.arange(0, len(average_reward))
-#x2 = np.arange(0, len(average_reward2))
+x2 = np.arange(0, len(average_reward2))
 
 parameter = np.polyfit(x, average_reward, 4)
-#parameter2 = np.polyfit(x2, average_reward2, 4)
+parameter2 = np.polyfit(x2, average_reward2, 4)
 
 p = np.poly1d(parameter)
-#p2 = np.poly1d(parameter2)
+p2 = np.poly1d(parameter2)
 plt.plot(x, average_reward, "c-")
 #plt.plot(x1, average_reward1, "bo")
 plt.plot(x, p(x), 'b--', linewidth = 3)
