@@ -9,7 +9,7 @@ def moving_average(a, n=20):
     return ret[n - 1:] / n
 
 average_reward = []
-f = open("dqn_results_full_synthetic_data.txt", "r")    #dqn_results_full_synthetic_data   #dqn_results_full_synthetic_data_but_without_combined_probability #dqn_results_static #dqn_results_full_real_world_data
+f = open("dqn_results_full_real_world_data.txt", "r")    #dqn_results_full_synthetic_data   #dqn_results_full_synthetic_data_but_without_combined_probability #dqn_results_static #dqn_results_full_real_world_data
 counter = 0
 for x in f:
     average_reward.append(float(x.strip()))
@@ -43,7 +43,7 @@ plt.plot(x, average_reward, "c-")
 #plt.plot(x1, average_reward1, "bo")
 plt.plot(x, p(x), 'b--', linewidth = 3)
 
-plt.legend(("Overfitting-reduced Dynamic Clustering with Weighted Voronoi and D3QN (Moving Average)", "Overfitting-reduced Dynamic Clustering with Weighted Voronoi and D3QN (Polynomial Curve Fitting)"), loc="lower right")
+plt.legend(("Overfitting-reduced Dynamic Clustering with Wxtceighted Voronoi and D3QN (Moving Average)", "Overfitting-reduced Dynamic Clustering with Weighted Voronoi and D3QN (Polynomial Curve Fitting)"), loc="lower right")
 plt.title('DQN Model (Real-world Truck Trace) Training Convergence Diagram')
 plt.xlabel('Training Epochs')
 plt.ylabel('Reward')
