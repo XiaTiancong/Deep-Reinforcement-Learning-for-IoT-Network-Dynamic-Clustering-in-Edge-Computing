@@ -475,7 +475,7 @@ if __name__ == "__main__":
     max_balance_diff = 0.8							# The game is over once the cluster is unbalanced over this threshold value.
     
 	# The setup parameters of DQN. 
-    epoch = 2800
+    epoch = 1200
     game_time = 50
     learning_rate = 0.0001
     discount = 0.5
@@ -548,7 +548,7 @@ if __name__ == "__main__":
             env.act_move_events()
         print("Epoch {:03d}/{} | Average Reward {}".format(a, epoch, round(sta_sum_reward/sta_ticks, 2)))
 
-        f = open('dqn_results_Final_static.txt', 'a+')
+        f = open('DRL_test/dqn_results_static.txt', 'a+')
         f.write("%s\n" % (sta_sum_reward/sta_ticks))
         f.close()
 
