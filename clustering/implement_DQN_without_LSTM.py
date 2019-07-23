@@ -362,10 +362,13 @@ class Cluster(object, ):
             self.df_sampled = self.agv.identical_sample_rate(self.df, sample_period)
             self.grided_pos = self.agv.trace_grided(self.df_sampled, grid_size)
             self.trace_grided = self.agv.delete_staying_pos(self.grided_pos)
+
             self.trace_input, self.trace_output = self.agv.get_inputs_and_outputs(self.trace_grided, time_steps)
             self.trace_dir_output = self.agv.get_dir(self.trace_input, self.trace_output)
+
             self.trace_input *= grid_size
             self.trace_output *= grid_size
+
             self.act_move_events
 
         else:
@@ -474,8 +477,10 @@ if __name__ == "__main__":
     Dueling = True
     read_AGV = True
     always_best_experience_method = False
-    DQN_and_RNN_method = True
-    using_combined_probability = True
+    DQN_and_RNN_method = False
+    using_combined_probability = False
+    using_simi_combined_probability = True
+    without_LSTM = True
 
     threshold = 0.3  # speed threshold for targets
     sample_period = 0.1  # target movement sample rate
@@ -543,22 +548,31 @@ if __name__ == "__main__":
     grid_num_x = int(deploy_range_x // grid_size_x + 1)
     grid_num_y = int(deploy_range_y // grid_size_y + 1)
 
-    #==================================== Load DQN and RNN model from json file====================================#
-    if DQN_and_RNN_method:
-        DRL_json_file = open('DRL_model_experiment/DRL_model_full_synthetic_data.json', 'r')
+    if without_LSTM:
+        DRL_json_file = open('DRL models/DRL_model_full_training_data_tackling_overfitting.json', 'r')
         loaded_model_json = DRL_json_file.read()
         DRL_json_file.close()
         DRL_model = model_from_json(loaded_model_json)
         # load weights into new model
-        DRL_model.load_weights("DRL_model_experiment/DRL_model_full_synthetic_data.h5")
+        DRL_model.load_weights("DRL models/DRL_model_full_training_data_tackling_overfitting.h5")
         print("Loaded DRL model from disk")
 
-        RNN_json_file = open('LSTM models/LSTM_full_data.json', 'r')
+    #==================================== Load DQN and RNN model from json file====================================#
+    if DQN_and_RNN_method:
+        DRL_json_file = open('DRL models/DRL_model_full_training_data_tackling_overfitting.json', 'r')
+        loaded_model_json = DRL_json_file.read()
+        DRL_json_file.close()
+        DRL_model = model_from_json(loaded_model_json)
+        # load weights into new model
+        DRL_model.load_weights("DRL models/DRL_model_full_training_data_tackling_overfitting.h5")
+        print("Loaded DRL model from disk")
+
+        RNN_json_file = open('model_action_prediction.json', 'r')
         loaded_model_json_ = RNN_json_file.read()
         RNN_json_file.close()
         RNN_model = model_from_json(loaded_model_json_)
         # load weights into new model
-        RNN_model.load_weights("LSTM models/LSTM_full_data.h5")
+        RNN_model.load_weights("model_action_prediction.h5")
         print("Loaded RNN model from disk")
     # ==================================== Load DQN and RNN model from json file====================================#
 
@@ -576,20 +590,54 @@ if __name__ == "__main__":
         best_method_reward = np.loadtxt('best_method_reward')
         best_method_state = np.loadtxt('best_method_state')
 
-    for a in range(epoch):
-        env.init_states()
-        env.reuse_network(save_state_xcor, save_state_ycor)
-        env.setup_parameters()
+    env.init_states()
+    env.reuse_network(save_state_xcor, save_state_ycor)
+    env.setup_parameters()
 
+    mem_state = []
+    game_over = 0
+    sta_max_reward = 0.0
+    sta_sum_reward = 0.0
+    sta_ticks = 0
+
+    for a in range(epoch):
         mem_state = []
         game_over = 0
         sta_max_reward = 0.0
         sta_sum_reward = 0.0
         sta_ticks = 0
-
         for tick in range(0, game_time):  # In every epoch, we move the event for game_time.
             env.act_move_events(total_tick)
-            if always_best_experience_method:
+
+            if without_LSTM:
+                if mem_state == []:
+                    if np.isnan(
+                            best_method_state[int(round(env.state_event_xcor / grid_size_x) * (grid_num_x + 1) + round(
+                                    env.state_event_ycor / grid_size_y)), 0]):
+                        action = env.act_action(mem_state, tick)
+
+                    else:
+                        best_method_state_reshaped = best_method_state.reshape((grid_num_x + 1, grid_num_y + 1, -1))
+                        x, y = int(round(env.state_event_xcor / grid_size_x)), int(
+                            round(env.state_event_ycor / grid_size_y))
+                        best_method_state_now = best_method_state_reshaped[x, y]
+                        env.set_network_to_optimal_in_exp(best_method_state_now)
+                    reward, state = env.act_reward(tick)
+                    mem_state = state
+                    network_state = env.network_state
+                else:
+                    behavior_prediction = np.asarray([0] * total_behavior_dim)
+                    network_state = env.network_state
+                    network_state = np.asarray(
+                        list(network_state) + list(behavior_prediction.reshape(total_behavior_dim, )))
+                    q_table = DRL_model.predict(network_state.reshape(1, -1), batch_size=1)
+                    action = np.argmax(q_table[0])
+                    print(action)
+                    env.action_route(action, tick)
+                    reward, state = env.act_reward(tick)
+                    mem_state = state
+
+            elif always_best_experience_method:
 
                 if np.isnan(best_method_state[int(round(env.state_event_xcor/grid_size_x) * (grid_num_x+1) + round(env.state_event_ycor/grid_size_y)) ,0]):
                     action = env.act_action(mem_state, tick)
@@ -628,6 +676,39 @@ if __name__ == "__main__":
                             network_state = env.network_state
                             network_state = np.asarray(list(network_state) + list(behavior_array))
                             q_table += DRL_model.predict(network_state.reshape(1, -1), batch_size=1) * float(behavior_prediction[0,i])
+                        action = np.argmax(q_table[0])
+                        print(action)
+                        env.action_route(action, tick)
+                        reward, state = env.act_reward(tick)
+                        mem_state = state
+
+                elif using_simi_combined_probability:
+                    if mem_state == []:
+                        if np.isnan(best_method_state[int(round(env.state_event_xcor / grid_size_x) *  (grid_num_x+1) + round(
+                                env.state_event_ycor / grid_size_y)), 0]):
+                            action = env.act_action(mem_state, tick)
+
+                        else:
+                            best_method_state_reshaped = best_method_state.reshape((grid_num_x+1, grid_num_y+1, -1))
+                            x, y = int(round(env.state_event_xcor / grid_size_x)), int(
+                                round(env.state_event_ycor / grid_size_y))
+                            best_method_state_now = best_method_state_reshaped[x, y]
+                            env.set_network_to_optimal_in_exp(best_method_state_now)
+                        reward, state = env.act_reward(tick)
+                        mem_state = state
+                        network_state = env.network_state
+                    else:
+                        behavior_prediction = RNN_model.predict(
+                            np.reshape(env.trace_input[total_tick], (-1, time_steps, 2)),
+                            batch_size=1)  # Here implementing cross-probability
+                        q_table = np.zeros((1, model_output_size))
+                        for i in range(total_behavior_dim):
+                            behavior_array = np_utils.to_categorical(i, num_classes=total_behavior_dim)
+                            network_state = env.network_state
+                            network_state = np.asarray(list(network_state) + list(behavior_array))
+                            q_table += np_utils.to_categorical(np.argmax(DRL_model.predict(network_state.reshape(1, -1), batch_size=1)), num_classes = model_output_size) * float(
+                                behavior_prediction[0, i])
+                        print(q_table)
                         action = np.argmax(q_table[0])
                         print(action)
                         env.action_route(action, tick)
@@ -719,7 +800,7 @@ if __name__ == "__main__":
 
         print("Epoch {:03d}/{} | Average Reward {}".format(a, epoch, round(sta_sum_reward / sta_ticks, 2)))
         print("total tick {}".format(total_tick))
-        f = open('DRL_test/dqn_results_full_synthetic_data.txt', 'a+')
+        f = open('dqn_results_Final_without_LSTM.txt', 'a+')
         f.write("%s\n" % (sta_sum_reward / sta_ticks))
         f.close()
         print("====================================================================================================================")
