@@ -333,7 +333,7 @@ class Cluster(object,):
 	# Init the event. Theoretically, the event could be init at any places. In the experiment, to make sure that the clusters are somehow balanced, we select a place that is in the middle position of all clusters. 
     def set_events(self):
         if read_AGV:
-            self.agv = AGV('training_with_insufficient_data')
+            self.agv = AGV('training_with_insufficient_data', 0.5)
             self.df = self.agv.get_df()
             self.df = self.agv.fit_to_canvas(self.df, deploy_range)
             self.df_sampled = self.agv.identical_sample_rate(self.df, sample_period)
@@ -491,13 +491,13 @@ if __name__ == "__main__":
     max_balance_diff = 0.8  # The game is over once the cluster is unbalanced over this threshold value.
 
     # The setup parameters of DQN.
-    epoch = 2000
+    epoch = 1500
     game_time = 50
     learning_rate = 0.0001
     discount = 0.5
     epsilon = 1.0
     epsilon_min = 0.01
-    epsilon_decay = 0.9996
+    epsilon_decay = 0.9999
 
     # Actions of the the DQN model.
 
@@ -600,15 +600,15 @@ if __name__ == "__main__":
         print("Epoch {:03d}/{} | Average Reward {}".format(a, epoch, round(sta_sum_reward/sta_ticks, 2)))
         print("total tick {}".format(total_tick))
 
-        f = open('DRL_model_convergence_experiment/DRL_results_real_data_benchmark.txt', 'a+')
+        f = open('DRL_model_convergence_experiment/DRL_results_50%_real_data_benchmark.txt', 'a+')
         f.write("%s\n" % (sta_sum_reward/sta_ticks))
         f.close()
         print("====================================================================================================================")
         if a % 25 == 0:
             # serialize model to JSON
             model_json = exp_replay.model.to_json()
-            with open("DRL_model_experiment/DRL_model_full_real_world_data_benchmark.json", "w") as json_file:
+            with open("DRL_model_experiment/DRL_model_50%_real_world_data_benchmark.json", "w") as json_file:
                 json_file.write(model_json)
             # serialize weights to HDF5
-            exp_replay.model.save_weights("DRL_model_experiment/DRL_model_full_real_world_data_benchmark.h5")
+            exp_replay.model.save_weights("DRL_model_experiment/DRL_model_50%_real_world_data_benchmark.h5")
             print("Saved model to disk")
