@@ -12,7 +12,7 @@ def moving_average(a, n=20):
 
 average_reward = []
 
-f = open("DRL_results_real_data_benchmark.txt", "r")    #DRL_results_real_data_new   #DRL_model_full_synthetic_data #DRL_results_real_data_benchmark #"DRL_results_real_data_new_25%
+f = open("DRL_results_50%_real_data_benchmark.txt", "r")    #DRL_results_real_data_new   #DRL_model_full_synthetic_data #DRL_results_real_data_benchmark #"DRL_results_real_data_new_25%
 counter = 0
 for x in f:
     average_reward.append(float(x.strip()))
