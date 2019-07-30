@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fcff2fb1-78fb-41f0-83bb-b31deee99c07" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/clustering/.idea/clustering.iml" beforeDir="false" afterPath="$PROJECT_DIR$/clustering/.idea/clustering.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clustering/implement_DQN+RNN_prediction.py" beforeDir="false" afterPath="$PROJECT_DIR$/clustering/implement_DQN+RNN_prediction.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clustering/implement_DQN+RNN_real_world_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/clustering/implement_DQN+RNN_real_world_data.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clustering/implement_DQN_benchmark.py" beforeDir="false" afterPath="$PROJECT_DIR$/clustering/implement_DQN_benchmark.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clustering/DRL_model_convergence_experiment/plt_convergence.py" beforeDir="false" afterPath="$PROJECT_DIR$/clustering/DRL_model_convergence_experiment/plt_convergence.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clustering/clustering_with_real_world_data_training_benchmark.py" beforeDir="false" afterPath="$PROJECT_DIR$/clustering/clustering_with_real_world_data_training_benchmark.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -19,7 +17,7 @@
         <entry file="file://$PROJECT_DIR$/clustering/implement_DQN+RNN_prediction.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="405">
-              <caret line="27" column="31" lean-forward="true" selection-start-line="27" selection-start-column="31" selection-end-line="27" selection-end-column="31" />
+              <caret line="27" column="31" selection-start-line="27" selection-start-column="31" selection-end-line="27" selection-end-column="31" />
             </state>
           </provider>
         </entry>
@@ -28,12 +26,12 @@
         <entry file="file://$PROJECT_DIR$/clustering/implement_DQN+RNN_real_world_data.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="335">
-              <caret line="555" column="67" lean-forward="true" selection-start-line="555" selection-start-column="67" selection-end-line="555" selection-end-column="67" />
+              <caret line="555" column="67" selection-start-line="555" selection-start-column="67" selection-end-line="555" selection-end-column="67" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/clustering/implement_DQN_benchmark.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="645">
@@ -42,7 +40,58 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/clustering/clustering_with_real_world_data_training_benchmark.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="660">
+              <caret line="612" column="103" selection-start-line="612" selection-start-column="77" selection-end-line="612" selection-end-column="103" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/clustering/DRL_model_convergence_experiment/DRL_results_25%_real_data_benchmark.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="370">
+              <caret line="947" column="19" selection-start-line="947" selection-start-column="19" selection-end-line="947" selection-end-column="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/clustering/DRL_model_convergence_experiment/plt_convergence.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="375">
+              <caret line="25" column="47" selection-start-line="25" selection-start-column="47" selection-end-line="25" selection-end-column="47" />
+              <folding>
+                <element signature="e#0#31#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/clustering/DRL_model_convergence_experiment/DRL_results_50%_real_data_benchmark.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-22655" />
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/clustering/DRL_model_convergence_experiment/DRL_results_real_data_benchmark.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-29255" />
+          </provider>
+        </entry>
+      </file>
     </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>model_from</find>
+      <find>full</find>
+      <find>0.5</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -53,6 +102,8 @@
         <option value="$PROJECT_DIR$/clustering/implement_DQN+RNN_prediction.py" />
         <option value="$PROJECT_DIR$/clustering/implement_DQN+RNN_real_world_data.py" />
         <option value="$PROJECT_DIR$/clustering/implement_DQN_benchmark.py" />
+        <option value="$PROJECT_DIR$/clustering/clustering_with_real_world_data_training_benchmark.py" />
+        <option value="$PROJECT_DIR$/clustering/DRL_model_convergence_experiment/plt_convergence.py" />
       </list>
     </option>
   </component>
@@ -82,6 +133,12 @@
               <item name="DRL_project" type="462c0819:PsiDirectoryNode" />
               <item name="clustering" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="DRL_project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DRL_project" type="462c0819:PsiDirectoryNode" />
+              <item name="clustering" type="462c0819:PsiDirectoryNode" />
+              <item name="DRL_model_convergence_experiment" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -105,7 +162,28 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.implement_DQN_benchmark">
+  <component name="RunManager" selected="Python.plt_convergence">
+    <configuration name="clustering_with_real_world_data_training_benchmark" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="DRL_project" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/clustering" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/clustering/clustering_with_real_world_data_training_benchmark.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="implement_DQN+RNN_prediction" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="DRL_project" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -169,8 +247,31 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="plt_convergence" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="DRL_project" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/clustering/DRL_model_convergence_experiment" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/clustering/DRL_model_convergence_experiment/plt_convergence.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.plt_convergence" />
+        <item itemvalue="Python.clustering_with_real_world_data_training_benchmark" />
         <item itemvalue="Python.implement_DQN_benchmark" />
         <item itemvalue="Python.implement_DQN+RNN_real_world_data" />
         <item itemvalue="Python.implement_DQN+RNN_prediction" />
@@ -192,7 +293,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="79" y="25" width="2481" height="1415" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Favorites" side_tool="true" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24979658" />
@@ -217,14 +317,14 @@
     <entry file="file://$PROJECT_DIR$/clustering/implement_DQN+RNN_prediction.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="405">
-          <caret line="27" column="31" lean-forward="true" selection-start-line="27" selection-start-column="31" selection-end-line="27" selection-end-column="31" />
+          <caret line="27" column="31" selection-start-line="27" selection-start-column="31" selection-end-line="27" selection-end-column="31" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/clustering/implement_DQN+RNN_real_world_data.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="335">
-          <caret line="555" column="67" lean-forward="true" selection-start-line="555" selection-start-column="67" selection-end-line="555" selection-end-column="67" />
+          <caret line="555" column="67" selection-start-line="555" selection-start-column="67" selection-end-line="555" selection-end-column="67" />
         </state>
       </provider>
     </entry>
@@ -232,6 +332,40 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="645">
           <caret line="609" column="42" selection-start-line="609" selection-start-column="42" selection-end-line="609" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/clustering/DRL_model_convergence_experiment/DRL_results_50%_real_data_benchmark.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-22655" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/clustering/DRL_model_convergence_experiment/DRL_results_real_data_benchmark.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-29255" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/clustering/clustering_with_real_world_data_training_benchmark.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="660">
+          <caret line="612" column="103" selection-start-line="612" selection-start-column="77" selection-end-line="612" selection-end-column="103" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/clustering/DRL_model_convergence_experiment/plt_convergence.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="25" column="47" selection-start-line="25" selection-start-column="47" selection-end-line="25" selection-end-column="47" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/clustering/DRL_model_convergence_experiment/DRL_results_25%_real_data_benchmark.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="370">
+          <caret line="947" column="19" selection-start-line="947" selection-start-column="19" selection-end-line="947" selection-end-column="19" />
         </state>
       </provider>
     </entry>

@@ -333,7 +333,7 @@ class Cluster(object,):
 	# Init the event. Theoretically, the event could be init at any places. In the experiment, to make sure that the clusters are somehow balanced, we select a place that is in the middle position of all clusters. 
     def set_events(self):
         if read_AGV:
-            self.agv = AGV('training_with_insufficient_data', 0.5)
+            self.agv = AGV('training_with_insufficient_data', 0.25)
             self.df = self.agv.get_df()
             self.df = self.agv.fit_to_canvas(self.df, deploy_range)
             self.df_sampled = self.agv.identical_sample_rate(self.df, sample_period)
@@ -600,15 +600,15 @@ if __name__ == "__main__":
         print("Epoch {:03d}/{} | Average Reward {}".format(a, epoch, round(sta_sum_reward/sta_ticks, 2)))
         print("total tick {}".format(total_tick))
 
-        f = open('DRL_model_convergence_experiment/DRL_results_50%_real_data_benchmark.txt', 'a+')
+        f = open('DRL_model_convergence_experiment/DRL_results_25%_real_data_benchmark.txt', 'a+')
         f.write("%s\n" % (sta_sum_reward/sta_ticks))
         f.close()
         print("====================================================================================================================")
         if a % 25 == 0:
             # serialize model to JSON
             model_json = exp_replay.model.to_json()
-            with open("DRL_model_experiment/DRL_model_50%_real_world_data_benchmark.json", "w") as json_file:
+            with open("DRL_model_experiment/DRL_model_25%_real_world_data_benchmark.json", "w") as json_file:
                 json_file.write(model_json)
             # serialize weights to HDF5
-            exp_replay.model.save_weights("DRL_model_experiment/DRL_model_50%_real_world_data_benchmark.h5")
+            exp_replay.model.save_weights("DRL_model_experiment/DRL_model_25%_real_world_data_benchmark.h5")
             print("Saved model to disk")
