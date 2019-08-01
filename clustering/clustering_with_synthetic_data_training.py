@@ -20,12 +20,12 @@ from keras.optimizers import Adam
 from read_AGV_data import AGV
 import re
 
-RNN_json_file = open('LSTM models/LSTM_25%_data.json', 'r')
+RNN_json_file = open('LSTM models/LSTM_full_data.json', 'r')
 loaded_model_json_ = RNN_json_file.read()
 RNN_json_file.close()
 RNN_model = model_from_json(loaded_model_json_)
 # load weights into new model
-RNN_model.load_weights("LSTM models/LSTM_25%_data.h5")
+RNN_model.load_weights("LSTM models/LSTM_full_data.h5")
 print("Loaded RNN model from disk")
 
 class Cluster(object,):
@@ -159,13 +159,13 @@ class Cluster(object,):
             '''
 
         else:
-            f = open("state_xcor.txt", "r")
+            f = open("state_xcor_2_clusters.txt", "r")
             i = 0
             for x in f:
                 self.state_xcor[i] = float(x.strip())
                 i = i + 1
             f.close()
-            f = open("state_ycor.txt", "r")
+            f = open("state_ycor_2_clusters.txt", "r")
             i = 0
             for y in f:
                 self.state_ycor[i] = float(y.strip())
@@ -570,8 +570,8 @@ if __name__ == "__main__":
     time_steps = 60
 
     #The setup of IoT network.
-    total_node_number = 80
-    server_number = 4
+    total_node_number = 40
+    server_number = 2
     node_number = total_node_number-server_number
     deploy_range = 15
     deploy_range_x = deploy_range
@@ -623,7 +623,7 @@ if __name__ == "__main__":
     exp_replay = ExperienceReplay(epsilon)
     save_state_xcor = env.state_xcor		# Save the coordinate values, the values are used for benchmark solutions. 
     save_state_ycor = env.state_ycor
-    #env.draw_network()
+    env.draw_network()
 
     grid_num_x = int(deploy_range_x // grid_size_x + 1)
     grid_num_y = int(deploy_range_y // grid_size_y + 1)
@@ -640,11 +640,12 @@ if __name__ == "__main__":
     x_poses = env.trace_grided[:, 0]
     starting_point = np.random.randint(len(x_poses))
 
-
+    env.set_events()
     for a in range(epoch):
         env.init_states()
         env.reuse_network(save_state_xcor, save_state_ycor)
-        env.setup_parameters()
+        env.set_server_and_header()
+        env.set_cluster_id()
         
         mem_state = []
         game_over = 0
@@ -705,7 +706,7 @@ if __name__ == "__main__":
         #np.savetxt('best_method_state', best_method_state)                          #Save best rewards and their states
         print("Epoch {:03d}/{} | Average Reward {}".format(a, epoch, round(sta_sum_reward/sta_ticks, 2)))
         print("total tick {}".format(total_tick))
-        f = open('DRL_model_convergence_experiment/DRL_model_25%_synthetic_data.txt', 'a+')
+        f = open('DRL_model_convergence_experiment/DRL_model_full_synthetic_data_2_clusters.txt', 'a+')
         f.write("%s\n" % (sta_sum_reward/sta_ticks))
         f.close()
         print("====================================================================================================================")
@@ -714,8 +715,8 @@ if __name__ == "__main__":
         if a%100 == 0:
             # serialize model to JSON
             model_json = exp_replay.model.to_json()
-            with open("DRL_model_experiment/DRL_model_25%_synthetic_data.json", "w") as json_file:
+            with open("DRL_model_experiment/DRL_model_full_synthetic_data_2_clusters.json", "w") as json_file:
                 json_file.write(model_json)
             # serialize weights to HDF5
-            exp_replay.model.save_weights("DRL_model_experiment/DRL_model_25%_synthetic_data.h5")
+            exp_replay.model.save_weights("DRL_model_experiment/DRL_model_full_synthetic_data_2_clusters.h5")
             print("Saved augmented model to disk")

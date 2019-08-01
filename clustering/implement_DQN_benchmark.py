@@ -131,13 +131,13 @@ class Cluster(object, ):
             '''
 
         else:
-            f = open("state_xcor.txt", "r")
+            f = open("state_xcor_2_clusters.txt", "r")
             i = 0
             for x in f:
                 self.state_xcor[i] = float(x.strip())
                 i = i + 1
             f.close()
-            f = open("state_ycor.txt", "r")
+            f = open("state_ycor_2_clusters.txt", "r")
             i = 0
             for y in f:
                 self.state_ycor[i] = float(y.strip())
@@ -477,8 +477,8 @@ if __name__ == "__main__":
     total_tick = 0
 
     # The setup of IoT network.
-    total_node_number = 80
-    server_number = 4
+    total_node_number = 40
+    server_number = 2
     node_number = total_node_number - server_number
     deploy_range = 15
     deploy_range_x = deploy_range
@@ -540,20 +540,22 @@ if __name__ == "__main__":
 
     #==================================== Load DQN and RNN model from json file====================================#
 
-    DRL_json_file = open('DRL_model_experiment/DRL_model_50%_real_world_data_benchmark.json', 'r')
+    DRL_json_file = open('DRL_model_experiment/DRL_model_full_real_world_data_benchmark_2_clusters.json', 'r')
     loaded_model_json = DRL_json_file.read()
     DRL_json_file.close()
     DRL_model = model_from_json(loaded_model_json)
     # load weights into new model
-    DRL_model.load_weights("DRL_model_experiment/DRL_model_50%_real_world_data_benchmark.h5")
+    DRL_model.load_weights("DRL_model_experiment/DRL_model_full_real_world_data_benchmark_2_clusters.h5")
     print("Loaded DRL model from disk")
 
     # ==================================== Load DQN and RNN model from json file====================================#
 
+    env.set_events()
     for a in range(epoch):
         env.init_states()
         env.reuse_network(save_state_xcor, save_state_ycor)
-        env.setup_parameters()
+        env.set_server_and_header()
+        env.set_cluster_id()
 
         mem_state = []
         game_over = 0
@@ -607,7 +609,7 @@ if __name__ == "__main__":
 
         print("Epoch {:03d}/{} | Average Reward {}".format(a, epoch, round(sta_sum_reward / sta_ticks, 2)))
         print("total tick {}".format(total_tick))
-        f = open('DRL_test/dqn_results_50%_real_world_data_banchmark.txt', 'a+')
+        f = open('DRL_test/dqn_results_full_real_world_data_banchmark_2_clusters.txt', 'a+')
         f.write("%s\n" % (sta_sum_reward / sta_ticks))
         f.close()
         print("====================================================================================================================")

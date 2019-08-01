@@ -126,13 +126,13 @@ class Cluster(object,):
             '''
 
         else:
-            f = open("state_xcor.txt", "r")
+            f = open("state_xcor_2_clusters.txt", "r")
             i = 0
             for x in f:
                 self.state_xcor[i] = float(x.strip())
                 i = i + 1
             f.close()
-            f = open("state_ycor.txt", "r")
+            f = open("state_ycor_2_clusters.txt", "r")
             i = 0
             for y in f:
                 self.state_ycor[i] = float(y.strip())
@@ -333,7 +333,7 @@ class Cluster(object,):
 	# Init the event. Theoretically, the event could be init at any places. In the experiment, to make sure that the clusters are somehow balanced, we select a place that is in the middle position of all clusters. 
     def set_events(self):
         if read_AGV:
-            self.agv = AGV('training_with_insufficient_data', 0.25)
+            self.agv = AGV('training_with_insufficient_data')
             self.df = self.agv.get_df()
             self.df = self.agv.fit_to_canvas(self.df, deploy_range)
             self.df_sampled = self.agv.identical_sample_rate(self.df, sample_period)
@@ -469,8 +469,8 @@ if __name__ == "__main__":
     time_steps = 60
 
     # The setup of IoT network.
-    total_node_number = 80
-    server_number = 4
+    total_node_number = 40
+    server_number = 2
     node_number = total_node_number - server_number
     deploy_range = 15
     deploy_range_x = deploy_range
@@ -600,15 +600,15 @@ if __name__ == "__main__":
         print("Epoch {:03d}/{} | Average Reward {}".format(a, epoch, round(sta_sum_reward/sta_ticks, 2)))
         print("total tick {}".format(total_tick))
 
-        f = open('DRL_model_convergence_experiment/DRL_results_25%_real_data_benchmark.txt', 'a+')
+        f = open('DRL_model_convergence_experiment/DRL_results_full_real_data_benchmark_2_clusters.txt', 'a+')
         f.write("%s\n" % (sta_sum_reward/sta_ticks))
         f.close()
         print("====================================================================================================================")
         if a % 25 == 0:
             # serialize model to JSON
             model_json = exp_replay.model.to_json()
-            with open("DRL_model_experiment/DRL_model_25%_real_world_data_benchmark.json", "w") as json_file:
+            with open("DRL_model_experiment/DRL_model_full_real_world_data_benchmark_2_clusters.json", "w") as json_file:
                 json_file.write(model_json)
             # serialize weights to HDF5
-            exp_replay.model.save_weights("DRL_model_experiment/DRL_model_25%_real_world_data_benchmark.h5")
+            exp_replay.model.save_weights("DRL_model_experiment/DRL_model_full_real_world_data_benchmark.h5")
             print("Saved model to disk")
