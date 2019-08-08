@@ -114,7 +114,7 @@ def mainMove():
         else:
             behavior_prediction_pos = RNN_model.predict(
                 np.reshape(pos_buf, (1, -1, 2)), batch_size=1)
-            randCol = ('Orange')
+            randCol = ('Red')
             ball.color(randCol)
             pos_sum = sum(behavior_prediction_pos[0])
             choose_action = pos_sum * np.random.random()

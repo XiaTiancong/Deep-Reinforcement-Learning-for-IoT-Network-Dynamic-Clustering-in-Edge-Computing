@@ -20,12 +20,12 @@ from keras.optimizers import Adam
 from read_AGV_data import AGV
 import re
 
-RNN_json_file = open('LSTM models/LSTM_full_data.json', 'r')
+RNN_json_file = open('LSTM models/LSTM_25%_data.json', 'r')
 loaded_model_json_ = RNN_json_file.read()
 RNN_json_file.close()
 RNN_model = model_from_json(loaded_model_json_)
 # load weights into new model
-RNN_model.load_weights("LSTM models/LSTM_full_data.h5")
+RNN_model.load_weights("LSTM models/LSTM_25%_data.h5")
 print("Loaded RNN model from disk")
 
 class Cluster(object,):
@@ -147,7 +147,7 @@ class Cluster(object,):
 
         if flag_benchmark_topology == 1:
             self.scatter_node_random_position()
-            '''
+
             with open('state_xcor.txt', 'w') as f:
                 for item in self.state_xcor:
                     f.write("%s\n" % item)
@@ -156,7 +156,7 @@ class Cluster(object,):
                 for item in self.state_ycor:
                     f.write("%s\n" % item)
             f.close()
-            '''
+
 
         else:
             f = open("state_xcor_2_clusters.txt", "r")
@@ -366,7 +366,7 @@ class Cluster(object,):
 	# Init the event. Theoretically, the event could be init at any places. In the experiment, to make sure that the clusters are somehow balanced, we select a place that is in the middle position of all clusters. 
     def set_events(self):
         if read_AGV:
-            self.agv = AGV('training')
+            self.agv = AGV('training', 0.25)
             self.df = self.agv.get_df()
             self.df = self.agv.fit_to_canvas(self.df, deploy_range)
             self.df_sampled = self.agv.identical_sample_rate(self.df, sample_period)
@@ -570,7 +570,7 @@ if __name__ == "__main__":
     time_steps = 60
 
     #The setup of IoT network.
-    total_node_number = 40
+    total_node_number = 80
     server_number = 2
     node_number = total_node_number-server_number
     deploy_range = 15
@@ -706,7 +706,7 @@ if __name__ == "__main__":
         #np.savetxt('best_method_state', best_method_state)                          #Save best rewards and their states
         print("Epoch {:03d}/{} | Average Reward {}".format(a, epoch, round(sta_sum_reward/sta_ticks, 2)))
         print("total tick {}".format(total_tick))
-        f = open('DRL_model_convergence_experiment/DRL_model_full_synthetic_data_2_clusters.txt', 'a+')
+        f = open('DRL_model_convergence_experiment/DRL_model_25%_synthetic_data_2_clusters.txt', 'a+')
         f.write("%s\n" % (sta_sum_reward/sta_ticks))
         f.close()
         print("====================================================================================================================")
@@ -715,8 +715,8 @@ if __name__ == "__main__":
         if a%100 == 0:
             # serialize model to JSON
             model_json = exp_replay.model.to_json()
-            with open("DRL_model_experiment/DRL_model_full_synthetic_data_2_clusters.json", "w") as json_file:
+            with open("DRL_model_experiment/DRL_model_25%_synthetic_data_2_clusters.json", "w") as json_file:
                 json_file.write(model_json)
             # serialize weights to HDF5
-            exp_replay.model.save_weights("DRL_model_experiment/DRL_model_full_synthetic_data_2_clusters.h5")
+            exp_replay.model.save_weights("DRL_model_experiment/DRL_model_25%_synthetic_data_2_clusters.h5")
             print("Saved augmented model to disk")

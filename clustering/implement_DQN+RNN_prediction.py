@@ -482,7 +482,7 @@ if __name__ == "__main__":
     total_tick = 0
 
     # The setup of IoT network.
-    total_node_number = 40
+    total_node_number = 80
     server_number = 2
     node_number = total_node_number - server_number
     deploy_range = 15
@@ -545,20 +545,20 @@ if __name__ == "__main__":
 
     #==================================== Load DQN and RNN model from json file====================================#
     if DQN_and_RNN_method:
-        DRL_json_file = open('DRL_model_experiment/DRL_model_full_synthetic_data_2_clusters.json', 'r')
+        DRL_json_file = open('DRL_model_experiment/DRL_model_25%_synthetic_data_2_clusters.json', 'r')
         loaded_model_json = DRL_json_file.read()
         DRL_json_file.close()
         DRL_model = model_from_json(loaded_model_json)
         # load weights into new model
-        DRL_model.load_weights("DRL_model_experiment/DRL_model_full_synthetic_data_2_clusters.h5")
+        DRL_model.load_weights("DRL_model_experiment/DRL_model_25%_synthetic_data_2_clusters.h5")
         print("Loaded DRL model from disk")
 
-        RNN_json_file = open('LSTM models/LSTM_full_data.json', 'r')
+        RNN_json_file = open('LSTM models/LSTM_25%_data.json', 'r')
         loaded_model_json_ = RNN_json_file.read()
         RNN_json_file.close()
         RNN_model = model_from_json(loaded_model_json_)
         # load weights into new model
-        RNN_model.load_weights("LSTM models/LSTM_full_data.h5")
+        RNN_model.load_weights("LSTM models/LSTM_25%_data.h5")
         print("Loaded RNN model from disk")
     # ==================================== Load DQN and RNN model from json file====================================#
 
@@ -721,7 +721,7 @@ if __name__ == "__main__":
 
         print("Epoch {:03d}/{} | Average Reward {}".format(a, epoch, round(sta_sum_reward / sta_ticks, 2)))
         print("total tick {}".format(total_tick))
-        f = open('DRL_test/dqn_results_full_synthetic_data_2_clusters.txt', 'a+')
+        f = open('DRL_test/dqn_results_25%_synthetic_data_2_clusters.txt', 'a+')
         f.write("%s\n" % (sta_sum_reward / sta_ticks))
         f.close()
         print("====================================================================================================================")

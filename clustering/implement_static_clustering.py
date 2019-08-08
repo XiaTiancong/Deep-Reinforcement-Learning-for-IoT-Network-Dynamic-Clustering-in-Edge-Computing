@@ -455,7 +455,7 @@ if __name__ == "__main__":
     time_steps = 60
 
 	#The setup of IoT network.
-    total_node_number = 40
+    total_node_number = 80
     server_number = 2
     node_number = total_node_number-server_number
     deploy_range = 15
