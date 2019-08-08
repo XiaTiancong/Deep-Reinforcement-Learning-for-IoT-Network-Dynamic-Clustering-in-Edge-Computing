@@ -456,7 +456,7 @@ if __name__ == "__main__":
 
 	#The setup of IoT network.
     total_node_number = 80
-    server_number = 4
+    server_number = 2
     node_number = total_node_number-server_number
     deploy_range = 15
     deploy_range_x = deploy_range
@@ -505,12 +505,13 @@ if __name__ == "__main__":
     save_state_xcor = env.state_xcor		# Save the coordinate values, the values are used for benchmark solutions. 
     save_state_ycor = env.state_ycor
 
-
+    env.set_events()
     for a in range(epoch):
         env.init_states()
         env.reuse_network(save_state_xcor, save_state_ycor)
-        env.setup_parameters()
-        
+        env.set_server_and_header()
+        env.set_cluster_id()
+
         mem_state = []
         game_over = 0
         sta_max_reward = 0.0
@@ -548,7 +549,7 @@ if __name__ == "__main__":
             env.act_move_events()
         print("Epoch {:03d}/{} | Average Reward {}".format(a, epoch, round(sta_sum_reward/sta_ticks, 2)))
 
-        f = open('DRL_test/dqn_results_static.txt', 'a+')
+        f = open('DRL_test/dqn_results_static_.txt', 'a+')
         f.write("%s\n" % (sta_sum_reward/sta_ticks))
         f.close()
 
