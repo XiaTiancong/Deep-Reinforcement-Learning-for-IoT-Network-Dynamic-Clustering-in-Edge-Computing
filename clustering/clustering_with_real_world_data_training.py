@@ -115,24 +115,24 @@ class Cluster(object,):
         if flag_benchmark_topology == 1:
             self.scatter_node_random_position()
 
-            with open('state_xcor_2_clusters.txt', 'w') as f:
+            with open('state_xcor_40_nodes.txt', 'w') as f:
                 for item in self.state_xcor:
                     f.write("%s\n" % item)
             f.close()
-            with open('state_ycor_2_clusters.txt', 'w') as f:
+            with open('state_ycor_40_nodes.txt', 'w') as f:
                 for item in self.state_ycor:
                     f.write("%s\n" % item)
             f.close()
 
 
         else:
-            f = open("state_xcor_2_clusters.txt", "r")
+            f = open("state_xcor_40_nodes.txt", "r")
             i = 0
             for x in f:
                 self.state_xcor[i] = float(x.strip())
                 i = i + 1
             f.close()
-            f = open("state_ycor_2_clusters.txt", "r")
+            f = open("state_ycor_40_nodes.txt", "r")
             i = 0
             for y in f:
                 self.state_ycor[i] = float(y.strip())
@@ -469,8 +469,8 @@ if __name__ == "__main__":
     time_steps = 60
 
     # The setup of IoT network.
-    total_node_number = 80
-    server_number = 2
+    total_node_number = 40
+    server_number = 4
     node_number = total_node_number - server_number
     deploy_range = 15
     deploy_range_x = deploy_range
@@ -602,15 +602,15 @@ if __name__ == "__main__":
         print("Epoch {:03d}/{} | Average Reward {}".format(a, epoch, round(sta_sum_reward/sta_ticks, 2)))
         print("total tick {}".format(total_tick))
 
-        f = open('DRL_model_convergence_experiment/DRL_results_25%_data_2_clusters.txt', 'a+')
+        f = open('DRL_model_convergence_experiment/DRL_results_25%_real_data_40_nodes.txt', 'a+')
         f.write("%s\n" % (sta_sum_reward/sta_ticks))
         f.close()
         print("====================================================================================================================")
         if a % 25 == 0:
             # serialize model to JSON
             model_json = exp_replay.model.to_json()
-            with open("DRL_model_experiment/DRL_model_25%_data_2_clusters.json", "w") as json_file:
+            with open("DRL_model_experiment/DRL_model_25%_data_40_nodes.json", "w") as json_file:
                 json_file.write(model_json)
             # serialize weights to HDF5
-            exp_replay.model.save_weights("DRL_model_experiment/DRL_model_25%_data_2_clusters.h5")
+            exp_replay.model.save_weights("DRL_model_experiment/DRL_model_25%_data_40_nodes.h5")
             print("Saved model to disk")
