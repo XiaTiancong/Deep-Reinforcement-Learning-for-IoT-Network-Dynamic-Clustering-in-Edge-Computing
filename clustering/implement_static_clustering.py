@@ -113,22 +113,22 @@ class Cluster(object):
 
         if flag_benchmark_topology == 1:
             self.scatter_node_random_position()
-            with open('state_xcor_2_clusters.txt', 'w') as f:
+            with open('state_xcor_20_nodes.txt', 'w') as f:
                 for item in self.state_xcor:
                     f.write("%s\n" % item)
             f.close()
-            with open('state_ycor_2_clusters.txt', 'w') as f:
+            with open('state_ycor_20_nodes.txt', 'w') as f:
                 for item in self.state_ycor:
                     f.write("%s\n" % item)
             f.close()
         else:
-            f = open("state_xcor_40_nodes.txt", "r")
+            f = open("state_xcor_20_nodes.txt", "r")
             i = 0
             for x in f:
                 self.state_xcor[i] = float(x.strip())
                 i = i + 1
             f.close()
-            f = open("state_ycor_40_nodes.txt", "r")
+            f = open("state_ycor_20_nodes.txt", "r")
             i = 0
             for y in f:
                 self.state_ycor[i] = float(y.strip())
@@ -455,7 +455,7 @@ if __name__ == "__main__":
     time_steps = 60
 
 	#The setup of IoT network.
-    total_node_number = 40
+    total_node_number = 20
     server_number = 4
     node_number = total_node_number-server_number
     deploy_range = 15
@@ -549,7 +549,7 @@ if __name__ == "__main__":
             env.act_move_events()
         print("Epoch {:03d}/{} | Average Reward {}".format(a, epoch, round(sta_sum_reward/sta_ticks, 2)))
 
-        f = open('DRL_test/dqn_results_static_40_nodes.txt', 'a+')
+        f = open('DRL_test/dqn_results_static_20_nodes.txt', 'a+')
         f.write("%s\n" % (sta_sum_reward/sta_ticks))
         f.close()
 

@@ -131,13 +131,13 @@ class Cluster(object, ):
             '''
 
         else:
-            f = open("state_xcor_40_nodes.txt", "r")
+            f = open("state_xcor_20_nodes.txt", "r")
             i = 0
             for x in f:
                 self.state_xcor[i] = float(x.strip())
                 i = i + 1
             f.close()
-            f = open("state_ycor_40_nodes.txt", "r")
+            f = open("state_ycor_20_nodes.txt", "r")
             i = 0
             for y in f:
                 self.state_ycor[i] = float(y.strip())
@@ -477,7 +477,7 @@ if __name__ == "__main__":
     total_tick = 0
 
     # The setup of IoT network.
-    total_node_number = 40
+    total_node_number = 20
     server_number = 4
     node_number = total_node_number - server_number
     deploy_range = 15
@@ -540,12 +540,12 @@ if __name__ == "__main__":
 
     #==================================== Load DQN and RNN model from json file====================================#
 
-    DRL_json_file = open('DRL_model_experiment/DRL_model_25%_real_world_data_benchmark_40_nodes.json', 'r')
+    DRL_json_file = open('DRL_model_experiment/DRL_model_25%_real_world_data_benchmark_20_nodes.json', 'r')
     loaded_model_json = DRL_json_file.read()
     DRL_json_file.close()
     DRL_model = model_from_json(loaded_model_json)
     # load weights into new model
-    DRL_model.load_weights("DRL_model_experiment/DRL_model_25%_real_world_data_benchmark_40_nodes.h5")
+    DRL_model.load_weights("DRL_model_experiment/DRL_model_25%_real_world_data_benchmark_20_nodes.h5")
     print("Loaded DRL model from disk")
 
     # ==================================== Load DQN and RNN model from json file====================================#
@@ -609,7 +609,7 @@ if __name__ == "__main__":
 
         print("Epoch {:03d}/{} | Average Reward {}".format(a, epoch, round(sta_sum_reward / sta_ticks, 2)))
         print("total tick {}".format(total_tick))
-        f = open('DRL_test/dqn_results_25%_real_world_data_benchmark_40_nodes.txt', 'a+')
+        f = open('DRL_test/dqn_results_25%_real_world_data_benchmark_20_nodes.txt', 'a+')
         f.write("%s\n" % (sta_sum_reward / sta_ticks))
         f.close()
         print("====================================================================================================================")

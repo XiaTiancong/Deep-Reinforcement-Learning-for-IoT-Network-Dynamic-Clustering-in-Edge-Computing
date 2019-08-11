@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fcff2fb1-78fb-41f0-83bb-b31deee99c07" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/clustering/clustering_with_real_world_data_training.py" beforeDir="false" afterPath="$PROJECT_DIR$/clustering/clustering_with_real_world_data_training.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/clustering/clustering_with_real_world_data_training_benchmark.py" beforeDir="false" afterPath="$PROJECT_DIR$/clustering/clustering_with_real_world_data_training_benchmark.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/clustering/clustering_with_synthetic_data_training.py" beforeDir="false" afterPath="$PROJECT_DIR$/clustering/clustering_with_synthetic_data_training.py" afterDir="false" />
@@ -19,11 +18,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/clustering/implement_DQN_benchmark.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2085">
-              <caret line="139" column="41" selection-start-line="139" selection-start-column="41" selection-end-line="139" selection-end-column="41" />
+            <state relative-caret-position="1126">
+              <caret line="547" column="90" selection-start-line="547" selection-start-column="90" selection-end-line="547" selection-end-column="90" />
             </state>
           </provider>
         </entry>
@@ -48,19 +47,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../PycharmProjects/A game/venv/lib/python3.6/site-packages/h5py/_hl/files.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="5685">
-              <caret line="393" selection-start-line="393" selection-end-line="393" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/clustering/implement_DQN+RNN_prediction.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="723" column="66" selection-start-line="723" selection-start-column="66" selection-end-line="723" selection-end-column="66" />
+            <state relative-caret-position="60">
+              <caret line="133" column="34" selection-start-line="133" selection-start-column="34" selection-end-line="133" selection-end-column="34" />
             </state>
           </provider>
         </entry>
@@ -68,8 +58,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/clustering/implement_DQN+RNN_real_world_data.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-850">
-              <caret line="142" column="53" lean-forward="true" selection-start-line="142" selection-start-column="53" selection-end-line="142" selection-end-column="53" />
+            <state relative-caret-position="2085">
+              <caret line="139" column="34" selection-start-line="139" selection-start-column="34" selection-end-line="139" selection-end-column="34" />
             </state>
           </provider>
         </entry>
@@ -77,8 +67,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/clustering/clustering_with_real_world_data_training_benchmark.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-5865">
-              <caret line="134" column="41" selection-start-line="134" selection-start-column="41" selection-end-line="134" selection-end-column="41" />
+            <state relative-caret-position="-2805">
+              <caret line="134" column="34" selection-start-line="134" selection-start-column="34" selection-end-line="134" selection-end-column="34" />
             </state>
           </provider>
         </entry>
@@ -86,17 +76,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/clustering/clustering_with_synthetic_data_training.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-505">
-              <caret line="541" column="14" selection-start-line="541" selection-start-column="8" selection-end-line="541" selection-end-column="14" />
+            <state relative-caret-position="-2025">
+              <caret line="21" selection-start-line="21" selection-end-line="21" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/clustering/implement_static_clustering.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-6044">
-              <caret line="130" column="41" selection-start-line="130" selection-start-column="41" selection-end-line="130" selection-end-column="41" />
+            <state relative-caret-position="315">
+              <caret line="551" column="47" selection-start-line="551" selection-start-column="47" selection-end-line="551" selection-end-column="47" />
             </state>
           </provider>
         </entry>
@@ -104,10 +94,15 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/clustering/clustering_with_real_world_data_training.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="121">
+            <state relative-caret-position="168">
               <caret line="459" column="31" selection-start-line="459" selection-start-column="31" selection-end-line="459" selection-end-column="31" />
             </state>
           </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/clustering/state_xcor_20_nodes.txt">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -138,13 +133,13 @@
         <option value="$PROJECT_DIR$/clustering/AGV_show/AGV_trace_imagined.py" />
         <option value="$PROJECT_DIR$/clustering/DRL_model_convergence_experiment/plt_convergence.py" />
         <option value="$PROJECT_DIR$/clustering/DRL_test/plt_test.py" />
-        <option value="$PROJECT_DIR$/clustering/clustering_with_real_world_data_training.py" />
         <option value="$PROJECT_DIR$/clustering/clustering_with_real_world_data_training_benchmark.py" />
+        <option value="$PROJECT_DIR$/clustering/clustering_with_real_world_data_training.py" />
         <option value="$PROJECT_DIR$/clustering/clustering_with_synthetic_data_training.py" />
         <option value="$PROJECT_DIR$/clustering/implement_DQN+RNN_prediction.py" />
         <option value="$PROJECT_DIR$/clustering/implement_DQN+RNN_real_world_data.py" />
-        <option value="$PROJECT_DIR$/clustering/implement_DQN_benchmark.py" />
         <option value="$PROJECT_DIR$/clustering/implement_static_clustering.py" />
+        <option value="$PROJECT_DIR$/clustering/implement_DQN_benchmark.py" />
       </list>
     </option>
   </component>
@@ -191,12 +186,6 @@
               <item name="DRL_project" type="b2602c69:ProjectViewProjectNode" />
               <item name="DRL_project" type="462c0819:PsiDirectoryNode" />
               <item name="clustering" type="462c0819:PsiDirectoryNode" />
-              <item name="DRL_model_experiment" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="DRL_project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DRL_project" type="462c0819:PsiDirectoryNode" />
-              <item name="clustering" type="462c0819:PsiDirectoryNode" />
               <item name="DRL_test" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -221,7 +210,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.implement_static_clustering">
+  <component name="RunManager" selected="Python.implement_DQN_benchmark">
     <configuration name="clustering_with_synthetic_data_training" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="DRL_project" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -329,8 +318,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.implement_static_clustering" />
         <item itemvalue="Python.implement_DQN_benchmark" />
+        <item itemvalue="Python.implement_static_clustering" />
         <item itemvalue="Python.implement_DQN+RNN_real_world_data" />
         <item itemvalue="Python.implement_DQN+RNN_prediction" />
         <item itemvalue="Python.clustering_with_synthetic_data_training" />
@@ -357,8 +346,8 @@
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.45788336" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32937366" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.42548597" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39956802" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -424,57 +413,60 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/clustering/DRL_model_convergence_experiment/plt_convergence.py" />
+    <entry file="file://$PROJECT_DIR$/clustering/DRL_test/dqn_results_static_2_clusters.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-405" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/clustering/state_xcor_20_nodes.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/clustering/clustering_with_real_world_data_training.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="121">
+        <state relative-caret-position="168">
           <caret line="459" column="31" selection-start-line="459" selection-start-column="31" selection-end-line="459" selection-end-column="31" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/clustering/clustering_with_synthetic_data_training.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-505">
-          <caret line="541" column="14" selection-start-line="541" selection-start-column="8" selection-end-line="541" selection-end-column="14" />
+        <state relative-caret-position="-2025">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/clustering/implement_DQN+RNN_prediction.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="723" column="66" selection-start-line="723" selection-start-column="66" selection-end-line="723" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/clustering/clustering_with_real_world_data_training_benchmark.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-5865">
-          <caret line="134" column="41" selection-start-line="134" selection-start-column="41" selection-end-line="134" selection-end-column="41" />
+        <state relative-caret-position="60">
+          <caret line="133" column="34" selection-start-line="133" selection-start-column="34" selection-end-line="133" selection-end-column="34" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/clustering/implement_DQN+RNN_real_world_data.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-850">
-          <caret line="142" column="53" lean-forward="true" selection-start-line="142" selection-start-column="53" selection-end-line="142" selection-end-column="53" />
+        <state relative-caret-position="2085">
+          <caret line="139" column="34" selection-start-line="139" selection-start-column="34" selection-end-line="139" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/clustering/implement_static_clustering.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="551" column="47" selection-start-line="551" selection-start-column="47" selection-end-line="551" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/clustering/clustering_with_real_world_data_training_benchmark.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2805">
+          <caret line="134" column="34" selection-start-line="134" selection-start-column="34" selection-end-line="134" selection-end-column="34" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/clustering/implement_DQN_benchmark.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2085">
-          <caret line="139" column="41" selection-start-line="139" selection-start-column="41" selection-end-line="139" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/clustering/DRL_test/dqn_results_static_2_clusters.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-405" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/clustering/implement_static_clustering.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-6044">
-          <caret line="130" column="41" selection-start-line="130" selection-start-column="41" selection-end-line="130" selection-end-column="41" />
+        <state relative-caret-position="1126">
+          <caret line="547" column="90" selection-start-line="547" selection-start-column="90" selection-end-line="547" selection-end-column="90" />
         </state>
       </provider>
     </entry>

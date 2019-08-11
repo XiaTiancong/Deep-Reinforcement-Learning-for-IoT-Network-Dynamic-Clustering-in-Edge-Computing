@@ -126,13 +126,13 @@ class Cluster(object,):
             '''
 
         else:
-            f = open("state_xcor_40_nodes.txt", "r")
+            f = open("state_xcor_20_nodes.txt", "r")
             i = 0
             for x in f:
                 self.state_xcor[i] = float(x.strip())
                 i = i + 1
             f.close()
-            f = open("state_ycor_40_nodes.txt", "r")
+            f = open("state_ycor_20_nodes.txt", "r")
             i = 0
             for y in f:
                 self.state_ycor[i] = float(y.strip())
@@ -469,7 +469,7 @@ if __name__ == "__main__":
     time_steps = 60
 
     # The setup of IoT network.
-    total_node_number = 40
+    total_node_number = 20
     server_number = 4
     node_number = total_node_number - server_number
     deploy_range = 15
@@ -601,15 +601,15 @@ if __name__ == "__main__":
         print("Epoch {:03d}/{} | Average Reward {}".format(a, epoch, round(sta_sum_reward/sta_ticks, 2)))
         print("total tick {}".format(total_tick))
 
-        f = open('DRL_model_convergence_experiment/DRL_results_25%_real_data_benchmark_40_nodes.txt', 'a+')
+        f = open('DRL_model_convergence_experiment/DRL_results_25%_real_data_benchmark_20_nodes.txt', 'a+')
         f.write("%s\n" % (sta_sum_reward/sta_ticks))
         f.close()
         print("====================================================================================================================")
         if a % 25 == 0:
             # serialize model to JSON
             model_json = exp_replay.model.to_json()
-            with open("DRL_model_experiment/DRL_model_25%_real_world_data_benchmark_40_nodes.json", "w") as json_file:
+            with open("DRL_model_experiment/DRL_model_25%_real_world_data_benchmark_20_nodes.json", "w") as json_file:
                 json_file.write(model_json)
             # serialize weights to HDF5
-            exp_replay.model.save_weights("DRL_model_experiment/DRL_model_25%_real_world_data_benchmark_40_nodes.h5")
+            exp_replay.model.save_weights("DRL_model_experiment/DRL_model_25%_real_world_data_benchmark_20_nodes.h5")
             print("Saved model to disk")
