@@ -13,7 +13,11 @@ def moving_average(a, n=20):
 average_reward = []
 
 
+<<<<<<< HEAD
 f = open("DRL_results_random_direction_benchmark.txt", "r")    #DRL_results_real_data_new   #DRL_model_full_synthetic_data #DRL_results_real_data_benchmark #"DRL_results_real_data_new_25%
+=======
+f = open("DRL_results_25%_real_data_benchmark.txt", "r")    #DRL_results_real_data_new   #DRL_model_full_synthetic_data #DRL_results_real_data_benchmark #"DRL_results_real_data_new_25%
+>>>>>>> 7751c75189434b27837c530650e5ec5c372bb273
 counter = 0
 for x in f:
     average_reward.append(float(x.strip()))
@@ -24,6 +28,7 @@ f.close()
 
 #average_reward = average_reward1 + average_reward
 average_reward = moving_average(average_reward)
+<<<<<<< HEAD
 #
 # counter = 0
 # average_reward2 = []
@@ -46,6 +51,30 @@ parameter = np.polyfit(x, average_reward, 4)
 
 p = np.poly1d(parameter)
 # p2 = np.poly1d(parameter2)
+=======
+
+counter = 0
+average_reward2 = []
+f2 = open("DRL_model_full_synthetic_data.txt", "r")
+for x in f2:
+    average_reward2.append(float(x.strip()))
+    counter += 1
+    if counter > total_point_num:
+        break
+f2.close()
+
+
+average_reward1 = moving_average(average_reward2)
+
+x = np.arange(0, len(average_reward))
+x2 = np.arange(0, len(average_reward2))
+
+parameter = np.polyfit(x, average_reward, 4)
+parameter2 = np.polyfit(x2, average_reward2, 4)
+
+p = np.poly1d(parameter)
+p2 = np.poly1d(parameter2)
+>>>>>>> 7751c75189434b27837c530650e5ec5c372bb273
 plt.plot(x, average_reward, "c-")
 #plt.plot(x1, average_reward1, "bo")
 plt.plot(x, p(x), 'b--', linewidth = 3)

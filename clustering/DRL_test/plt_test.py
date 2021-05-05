@@ -9,7 +9,11 @@ def moving_average(a, n=20):
     return ret[n - 1:] / n
 
 average_reward = []
+<<<<<<< HEAD
 f = open("dqn_results_random_direction_static_solution_benchmark.txt", "r")    #dqn_results_full_synthetic_data   #dqn_results_full_synthetic_data_but_without_combined_probability #dqn_results_static #dqn_results_full_real_world_data
+=======
+f = open("dqn_results_static_.txt", "r")    #dqn_results_full_synthetic_data   #dqn_results_full_synthetic_data_but_without_combined_probability #dqn_results_static #dqn_results_full_real_world_data
+>>>>>>> 7751c75189434b27837c530650e5ec5c372bb273
 counter = 0
 for x in f:
     average_reward.append(float(x.strip()))

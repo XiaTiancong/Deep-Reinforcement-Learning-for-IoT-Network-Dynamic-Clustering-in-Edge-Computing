@@ -115,6 +115,7 @@ class Cluster(object,):
         if flag_benchmark_topology == 1:
             self.scatter_node_random_position()
 
+
             with open('state_xcor_20.txt', 'w') as f:
                 for item in self.state_xcor:
                     f.write("%s\n" % item)
@@ -422,8 +423,6 @@ class Cluster(object,):
 
 
 
-
-
 class ExperienceReplay(object):
     def __init__(self, epsilon):
         self.memory = list()
@@ -483,6 +482,7 @@ if __name__ == "__main__":
     Dueling = True
     read_AGV = False
     transfer_learning = True
+
     threshold = 0.3  # speed threshold for targets
     sample_period = 0.5  # target movement sample rate
     total_tick = 0

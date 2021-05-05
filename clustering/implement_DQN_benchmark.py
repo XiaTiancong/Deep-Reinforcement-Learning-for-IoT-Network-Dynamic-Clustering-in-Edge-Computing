@@ -129,7 +129,7 @@ class Cluster(object, ):
             f.close()
             '''
 
-        else:
+        else
             f = open("state_xcor_20.txt", "r")
             i = 0
             for x in f:
@@ -407,7 +407,6 @@ class Cluster(object, ):
             self.state_event_step_rate_xcor = math.cos(new_direction)
             self.state_event_step_rate_xcor = math.sin(new_direction)
 
-
     # The event moves in the network. The event triggers the neighbor sensors to produce more data.
     def act_move_events(self, total_tick):
         if read_AGV:
@@ -439,6 +438,7 @@ class Cluster(object, ):
                     new_direction = random.uniform(-math.pi, 0)
                     self.state_event_step_rate_xcor = math.cos(new_direction)
                     self.state_event_step_rate_xcor = math.sin(new_direction)
+
 
 class ExperienceReplay(object):
     def __init__(self, epsilon):
