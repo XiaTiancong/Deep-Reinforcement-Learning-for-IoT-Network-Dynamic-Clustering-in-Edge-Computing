@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="fcff2fb1-78fb-41f0-83bb-b31deee99c07" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1r20IE9gOacLGvOJ5VA73mtRH9j" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="GitIgnore" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RunManager" selected="Python.plt_test">
+    <configuration name="change" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="DRL_project" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/clustering/DRL_test" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/clustering/DRL_test/change.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="clustering_with_real_world_data_training_benchmark" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="DRL_project" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/clustering" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/clustering/clustering_with_real_world_data_training_benchmark.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="implement_DQN_benchmark" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="DRL_project" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/clustering" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/clustering/implement_DQN_benchmark.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="plt_convergence" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="DRL_project" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/clustering/DRL_model_convergence_experiment" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/clustering/DRL_model_convergence_experiment/plt_convergence.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="plt_test" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="DRL_project" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/clustering/DRL_test" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/clustering/DRL_test/plt_test.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.plt_test" />
+        <item itemvalue="Python.implement_DQN_benchmark" />
+        <item itemvalue="Python.change" />
+        <item itemvalue="Python.plt_convergence" />
+        <item itemvalue="Python.clustering_with_real_world_data_training_benchmark" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="fcff2fb1-78fb-41f0-83bb-b31deee99c07" name="Default Changelist" comment="" />
+      <created>1564412284399</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1564412284399</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="607" y="112" key="#clustering_with_real_world_data_training_benchmark" timestamp="1618164321606">
+      <screen x="0" y="23" width="1920" height="971" />
+    </state>
+    <state x="607" y="112" key="#clustering_with_real_world_data_training_benchmark/0.23.1920.971@0.23.1920.971" timestamp="1618164321606" />
+    <state x="659" y="248" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1620200410587">
+      <screen x="0" y="23" width="1680" height="949" />
+    </state>
+    <state x="659" y="247" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1680.944@0.23.1680.944" timestamp="1618869032132" />
+    <state x="659" y="248" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1680.949@0.23.1680.949" timestamp="1620200410587" />
+    <state width="1638" height="311" key="GridCell.Tab.0.bottom" timestamp="1620200455073">
+      <screen x="0" y="23" width="1680" height="949" />
+    </state>
+    <state width="1800" height="183" key="GridCell.Tab.0.bottom/0.23.1680.941@0.23.1680.941" timestamp="1618867717056" />
+    <state width="1638" height="181" key="GridCell.Tab.0.bottom/0.23.1680.944@0.23.1680.944" timestamp="1619291014739" />
+    <state width="1638" height="181" key="GridCell.Tab.0.bottom/0.23.1680.947@0.23.1680.947" timestamp="1619291718665" />
+    <state width="1638" height="311" key="GridCell.Tab.0.bottom/0.23.1680.949@0.23.1680.949" timestamp="1620200455073" />
+    <state width="1800" height="183" key="GridCell.Tab.0.bottom/0.23.1920.971@0.23.1920.971" timestamp="1618165594896" />
+    <state width="1638" height="311" key="GridCell.Tab.0.center" timestamp="1620200455072">
+      <screen x="0" y="23" width="1680" height="949" />
+    </state>
+    <state width="1800" height="183" key="GridCell.Tab.0.center/0.23.1680.941@0.23.1680.941" timestamp="1618867717055" />
+    <state width="1638" height="181" key="GridCell.Tab.0.center/0.23.1680.944@0.23.1680.944" timestamp="1619291014738" />
+    <state width="1638" height="181" key="GridCell.Tab.0.center/0.23.1680.947@0.23.1680.947" timestamp="1619291718664" />
+    <state width="1638" height="311" key="GridCell.Tab.0.center/0.23.1680.949@0.23.1680.949" timestamp="1620200455072" />
+    <state width="1800" height="183" key="GridCell.Tab.0.center/0.23.1920.971@0.23.1920.971" timestamp="1618165594895" />
+    <state width="1638" height="311" key="GridCell.Tab.0.left" timestamp="1620200455071">
+      <screen x="0" y="23" width="1680" height="949" />
+    </state>
+    <state width="1800" height="183" key="GridCell.Tab.0.left/0.23.1680.941@0.23.1680.941" timestamp="1618867717054" />
+    <state width="1638" height="181" key="GridCell.Tab.0.left/0.23.1680.944@0.23.1680.944" timestamp="1619291014737" />
+    <state width="1638" height="181" key="GridCell.Tab.0.left/0.23.1680.947@0.23.1680.947" timestamp="1619291718664" />
+    <state width="1638" height="311" key="GridCell.Tab.0.left/0.23.1680.949@0.23.1680.949" timestamp="1620200455071" />
+    <state width="1800" height="183" key="GridCell.Tab.0.left/0.23.1920.971@0.23.1920.971" timestamp="1618165594895" />
+    <state width="1638" height="311" key="GridCell.Tab.0.right" timestamp="1620200455072">
+      <screen x="0" y="23" width="1680" height="949" />
+    </state>
+    <state width="1800" height="183" key="GridCell.Tab.0.right/0.23.1680.941@0.23.1680.941" timestamp="1618867717055" />
+    <state width="1638" height="181" key="GridCell.Tab.0.right/0.23.1680.944@0.23.1680.944" timestamp="1619291014738" />
+    <state width="1638" height="181" key="GridCell.Tab.0.right/0.23.1680.947@0.23.1680.947" timestamp="1619291718665" />
+    <state width="1638" height="311" key="GridCell.Tab.0.right/0.23.1680.949@0.23.1680.949" timestamp="1620200455072" />
+    <state width="1800" height="183" key="GridCell.Tab.0.right/0.23.1920.971@0.23.1920.971" timestamp="1618165594896" />
+    <state width="1638" height="311" key="GridCell.Tab.1.bottom" timestamp="1620200455074">
+      <screen x="0" y="23" width="1680" height="949" />
+    </state>
+    <state width="1638" height="311" key="GridCell.Tab.1.bottom/0.23.1680.949@0.23.1680.949" timestamp="1620200455074" />
+    <state width="1638" height="311" key="GridCell.Tab.1.center" timestamp="1620200455073">
+      <screen x="0" y="23" width="1680" height="949" />
+    </state>
+    <state width="1638" height="311" key="GridCell.Tab.1.center/0.23.1680.949@0.23.1680.949" timestamp="1620200455073" />
+    <state width="1638" height="311" key="GridCell.Tab.1.left" timestamp="1620200455073">
+      <screen x="0" y="23" width="1680" height="949" />
+    </state>
+    <state width="1638" height="311" key="GridCell.Tab.1.left/0.23.1680.949@0.23.1680.949" timestamp="1620200455073" />
+    <state width="1638" height="311" key="GridCell.Tab.1.right" timestamp="1620200455073">
+      <screen x="0" y="23" width="1680" height="949" />
+    </state>
+    <state width="1638" height="311" key="GridCell.Tab.1.right/0.23.1680.949@0.23.1680.949" timestamp="1620200455073" />
+    <state x="900" y="228" key="SettingsEditor" timestamp="1618164788263">
+      <screen x="0" y="23" width="1920" height="971" />
+    </state>
+    <state x="900" y="228" key="SettingsEditor/0.23.1920.971@0.23.1920.971" timestamp="1618164788263" />
+  </component>
+</project>
